@@ -1,0 +1,11 @@
+export { default as LacosteImg } from './lacoste.png';
+export { default as FiespImg } from './fiesp.png';
+export { default as ItaltelImg } from './italtel.png';
+export { default as GptwImg } from './great_place_to_work.png';
+export { default as RdiImg } from './rdi.png';
+export { default as AmakhaImg } from './amakha.png';
+export { default as FitchRatingsImg } from './fitch_ratings.png';
+export { default as FisImg } from './fis.png';
+export { default as FoxconnImg } from './foxconn.png';
+export { default as MedicinaUspImg } from './medicina_usp.png';
+export { default as GreeImg } from './gree.png';
