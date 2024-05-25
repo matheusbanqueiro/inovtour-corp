@@ -42,5 +42,9 @@ npm run sanity-import
 yarn dev
 ```
 
+8 - Run CMS Sanity
 
+```bash
+npm run sanity
+```
 

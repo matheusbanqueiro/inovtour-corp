@@ -7,19 +7,17 @@ async function sharedMetaData(params) {
   const settings = await getSettings();
 
   return {
-    // enable this for resolving opengraph image
-    // metadataBase: new URL(settings.url),
     title: {
       default:
         settings?.title ||
-        "Stablo - Blog Template for Next.js & Sanity CMS",
+        "Inovtour",
       template: "%s | Stablo"
     },
     description:
       settings?.description ||
-      "Stablo - popular open-source next.js and sanity blog template",
-    keywords: ["Next.js", "Sanity", "Tailwind CSS"],
-    authors: [{ name: "Surjith" }],
+      "Inovtour cooperates with the best travel agencies in the world to provide you with the best travel experience.",
+    keywords: ["travel", "tourism", "vacation", "trip"],
+    authors: [{ name: "Govinda Systems DAO" }],
     canonical: settings?.url,
     openGraph: {
       images: [
