@@ -29,7 +29,7 @@ export default function Contact({ settings }) {
   const { submit: onSubmit } = useWeb3Forms({
     access_key: apiKey,
     settings: {
-      from_name: "Stablo Template",
+      from_name: "Inovtour",
       subject: "New Contact Message from Stablo Website"
     },
     onSuccess: (msg, data) => {

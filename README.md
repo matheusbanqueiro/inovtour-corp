@@ -48,3 +48,9 @@ yarn dev
 npm run sanity
 ```
 
+9 - Deploy to Vercel
+
+```bash
+npx vercel --prod
+```
+
