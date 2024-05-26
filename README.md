@@ -7,12 +7,9 @@ Inovtour Corp
 <p align="center">
 A corporate travel management platform.
 <p>
-<p align="center">
-  <a href="https://www.npmjs.com/package/inovtour-corp"><img src="https://img.shields.io/npm/v/inovtour-corp?color=ff3670&label="></a>
-<p>
 
 <p align="center">
-<a href="https://inovtour-corp.live/"><b>Live Demo!</b></a>
+<a href="https://inovtour-corp.vercel.app/"><b>Live Demo!</b></a>
 </p>
 <p align="center">
  <a href="https://inovtour-corp.docs">📖 Documentation</a> | <a href="https://inovtour-corp.docs/intro/">🚀 Getting Started</a> | <a href="https://www.jsdelivr.com/package/npm/inovtour-corp">🌐 CDN</a> | <a href="https://discord.gg/AgrbSrBer3" title="Discord invite">🙌 Join Us</a>
@@ -28,7 +25,6 @@ Try Live Editor previews of future releases: <a href="https://develop.inovtour-c
 <br>
 
 [![NPM](https://img.shields.io/npm/v/inovtour-corp)](https://www.npmjs.com/package/inovtour-corp)
-[![Build CI Status](https://github.com/govinda777/inovtour-corp/actions/workflows/build.yml/badge.svg)](https://github.com/govinda777/inovtour-corp/actions/workflows/build.yml)
 [![npm minified gzipped bundle size](https://img.shields.io/bundlephobia/minzip/inovtour-corp)](https://bundlephobia.com/package/inovtour-corp)
 [![Coverage Status](https://codecov.io/github/govinda777/inovtour-corp/branch/develop/graph/badge.svg)](https://app.codecov.io/github/govinda777/inovtour-corp/tree/develop)
 [![CDN Status](https://img.shields.io/jsdelivr/npm/hm/inovtour-corp)](https://www.jsdelivr.com/package/npm/inovtour-corp)
@@ -41,8 +37,6 @@ Try Live Editor previews of future releases: <a href="https://develop.inovtour-c
 :trophy: **Inovtour Corp won the [Corporate Travel Awards (2023)](https://awards.com/corporate-travel/2023) in the category "Best Travel Management Platform"!!!**
 
 **Thanks to all involved, people committing pull requests, people answering questions! 🙏**
-
-<a href="https://inovtour-corp.docs/book/"><img src="https://github.com/govinda777/inovtour-corp/blob/main/public/img/book-banner.jpg" alt="Explore Inovtour Corp in depth, with real-world examples, tips & tricks... The first official book on Inovtour Corp is available for purchase. Check it out!"></a>
 
 ## Table of Content
 
