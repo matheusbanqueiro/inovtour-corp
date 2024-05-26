@@ -11,7 +11,7 @@ import Clients from "@/components/clients";
 import ContactForm from "@/components/contactForm";
 import Testimonials from "@/components/testimonials";
 
-export default function Post({ posts }) {
+export default function Home() {
   return (
     <>
       <Hero />

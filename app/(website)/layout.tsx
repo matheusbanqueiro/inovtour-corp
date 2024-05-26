@@ -31,7 +31,7 @@ async function sharedMetaData(params) {
       ]
     },
     twitter: {
-      title: settings?.title || "Stablo Template",
+      title: settings?.title || "Inovtour",
       card: "summary_large_image"
     },
     robots: {
