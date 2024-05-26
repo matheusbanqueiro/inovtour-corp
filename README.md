@@ -122,3 +122,21 @@ npm run sanity
 npx vercel --prod
 ```
 
+## Usage
+
+### Features 
+
+* Travel Booking: Book flights, hotels, and car rentals.
+* Expense Management: Track and manage travel expenses.
+* Itinerary Planning: Create and share detailed travel itineraries.
+* Real-time Updates: Get updates on flight status, hotel bookings, and more.
+
+### Integrations
+Inovtour Corp integrates with several third-party services to provide a seamless experience. Check out the Integrations page for more details.
+
+### Contributing
+We welcome contributions from the community. To get started, check out our Contributing Guide.
+
+### License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
