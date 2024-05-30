@@ -2,6 +2,8 @@ import Container from "@/components/container";
 import Banner from "@/components/banner";
 import InfoSegment from "@/components/infoSegment";
 import CallToAction from "@/components/callToAction";
+import Image from 'next/image';
+import React from 'react';
 import {
     SolutionsBannerImg,
     SolutionsAirlineTicketsImg,
@@ -9,7 +11,9 @@ import {
     SolutionsCarRentalImg,
     SolutionsCorporateEventsImg,
     SolutionsPromotionPackagesImg,
-    SolutionsCallToActionImg
+    SolutionsCallToActionImg,
+    SolutionsWatermark1Img,
+    SolutionsWatermark2Img
 } from "@/public/img/solutions";
 
 export default function Solutions() {
@@ -81,17 +85,29 @@ export default function Solutions() {
                 subtitle={bannerSubtitle} 
             />
             {segments.map((segment, index) => (
-                <InfoSegment
-                    key={index}
-                    imgSrc={segment.imgSrc}
-                    imgAlt={segment.imgAlt}
-                    isImgRight={segment.isImgRight}
-                    title={segment.title}
-                    mainParagraph={segment.mainParagraph}
-                    secondaryParagraph={segment.secondaryParagraph}
-                    buttonText={segment.buttonText}
-                    buttonLink={segment.buttonLink}
-                />
+                <React.Fragment key={index}>
+                    <InfoSegment
+                        imgSrc={segment.imgSrc}
+                        imgAlt={segment.imgAlt}
+                        isImgRight={segment.isImgRight}
+                        title={segment.title}
+                        mainParagraph={segment.mainParagraph}
+                        secondaryParagraph={segment.secondaryParagraph}
+                        buttonText={segment.buttonText}
+                        buttonLink={segment.buttonLink}
+                    />
+                    {index < segments.length - 1 && (
+                        <div className="relative py-12 flex justify-center">
+                            <Image
+                                src={segment.isImgRight ? SolutionsWatermark2Img : SolutionsWatermark1Img}
+                                alt="Watermark"
+                                width={400}
+                                height={200}
+                                className="opacity-10"
+                            />
+                        </div>
+                    )}
+                </React.Fragment>
             ))}
             <CallToAction
                 backgroundImage={SolutionsCallToActionImg}

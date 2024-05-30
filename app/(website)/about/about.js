@@ -1,57 +1,35 @@
 import Container from "@/components/container";
-import { urlForImage } from "@/lib/sanity/image";
-import Image from "next/image";
-import Link from "next/link";
+import AboutSection from "@/components/aboutSection";
+import PillarsSection from "@/components/pillarsSection";
+import VisionMissionValuesSection from "@/components/visionMissionValuesSection";
+import VisionMissionValuesImg from "@/public/img/vision_mission_values_section.png";
 
-export default function About({ authors, settings }) {
-  return (
-    <Container>
-      <h1 className="text-brand-primary mb-3 mt-2 text-center text-3xl font-semibold tracking-tight dark:text-white lg:text-4xl lg:leading-snug">
-        About
-      </h1>
-      <div className="text-center">
-        <p className="text-lg">We are a small passionate team.</p>
-      </div>
+export default function About() {
+    const aboutTitle = 'INOVTOUR há 14 anos fazendo história na gestão de viagens corporativas por todo mundo';
+    const aboutSubtitle = 'Contando com profissionais experientes e capacitados, comprometidos em desenvolver os melhores resultados.';
 
-      <div className="mb-16 mt-6 grid grid-cols-3 gap-5 md:mb-32 md:mt-16 md:gap-16">
-        {authors.slice(0, 3).map(author => {
-          const imageProps = urlForImage(author?.image) || null;
-          return (
-            <div
-              key={author._id}
-              className="relative aspect-square overflow-hidden rounded-md bg-slate-50 odd:translate-y-10 odd:md:translate-y-16">
-              <Link href={`/author/${author?.slug}`}>
-                {imageProps && (
-                  <Image
-                    src={imageProps?.src}
-                    alt={author?.name || " "}
-                    fill
-                    sizes="(max-width: 320px) 100vw, 320px"
-                    className="object-cover"
-                  />
-                )}
-              </Link>
-            </div>
-          );
-        })}
-      </div>
+    const vision = "Por entendermos que cada cliente é único e exclusivo, nossa principal motivação é proporcionar um atendimento personalizado em todas as viagens, oferecendo soluções de gestão que alinhem os resultados com eficiência, através de processos especializados.";
+    const mission = "Innovar no Mercado de Viagens Corporativas, através de ferramentas de gestão consolidadas, com um alto desempenho, para buscar o melhor resultado, no processo da viagem corporativa, incentivando relações de confiança com os nossos clientes.";
+    const values = [
+        "Valorização Humana",
+        "Qualidade e Eficiência",
+        "Segurança",
+        "Comprometimento"
+    ];
 
-      <div className="prose mx-auto mt-14 text-center dark:prose-invert">
-        <p>
-          We provide real-time connectivity to enable software
-          providers and financial institutions to build integrated
-          products for their small business customers.
-        </p>
-        <p>
-          Our API infrastructure is leveraged by clients ranging from
-          lenders to corporate card providers and business forecasting
-          tools, with use cases including automatic reconciliation,
-          business dashboarding, and loan decisioning.
-        </p>
-        <p>
-          <Link href="/contact">Get in touch</Link>
-        </p>
-      </div>
-    </Container>
-  );
+    return (
+        <Container>
+            <AboutSection 
+                title={aboutTitle}
+                subtitle={aboutSubtitle}
+            />
+            <PillarsSection />
+            <VisionMissionValuesSection 
+                vision={vision}
+                mission={mission}
+                values={values}
+                imageSrc={VisionMissionValuesImg}
+            />
+        </Container>
+    );
 }
