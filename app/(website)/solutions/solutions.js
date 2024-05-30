@@ -1,13 +1,15 @@
 import Container from "@/components/container";
 import Banner from "@/components/banner";
 import InfoSegment from "@/components/infoSegment";
+import CallToAction from "@/components/callToAction";
 import {
     SolutionsBannerImg,
     SolutionsAirlineTicketsImg,
     SolutionsAccommodationImg,
     SolutionsCarRentalImg,
     SolutionsCorporateEventsImg,
-    SolutionsPromotionPackagesImg
+    SolutionsPromotionPackagesImg,
+    SolutionsCallToActionImg
 } from "@/public/img/solutions";
 
 export default function Solutions() {
@@ -91,6 +93,13 @@ export default function Solutions() {
                     buttonLink={segment.buttonLink}
                 />
             ))}
+            <CallToAction
+                backgroundImage={SolutionsCallToActionImg}
+                title="Gostou das opções de serviços que oferecemos?"
+                subtitle="Nossos agentes estão à sua espera"
+                buttonText="Sua jornada começa aqui"
+                buttonLink="/contact"
+            />
         </Container>
     );
 }
