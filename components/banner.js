@@ -23,7 +23,7 @@ const Banner = ({ images, title, subtitle }) => {
   }
 
   return (
-    <div style={{ ...styles.container, backgroundImage: `url(${images[currentIndex]})` }}>
+    <div style={{ ...styles.container, backgroundImage: `url(${images[currentIndex].src})` }}>
       <div style={styles.overlay}>
         <h1 style={styles.title}>{title}</h1>
         <p style={styles.subtitle}>{subtitle}</p>

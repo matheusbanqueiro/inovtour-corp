@@ -134,9 +134,18 @@ npx vercel --prod
 ### Integrations
 Inovtour Corp integrates with several third-party services to provide a seamless experience. Check out the Integrations page for more details.
 
-### Contributing
+## Links
+
+- [Live Demo](https://inovtour-corp.vercel.app/)
+- [Documentation](https://inovtour-corp.docs)
+- [Figma Site](https://www.figma.com/design/pjuPkngqXmwDqPl5W3UU1y/Inovtour?node-id=94-434&t=gm8OsOSOTa1JeJKn-1)
+- [Figma Estudo](https://www.figma.com/file/eQNyCKBenlZYG1sXA03t5n/Inovtour---desk-research?type=whiteboard&node-id=0%3A1&t=HJ4fZZLiCpHuahNk-1)
+- [Blue Ocean](https://docs.google.com/spreadsheets/d/1IE6fQinP2gdQYV3Ib0WicAfLGkd9JVj7Hq_TwJNW3BM/edit?usp=sharing)
+- [Miro](https://miro.com/app/board/uXjVKRVfwCk=/)
+
+## Contributing
 We welcome contributions from the community. To get started, check out our Contributing Guide.
 
-### License
+## License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
