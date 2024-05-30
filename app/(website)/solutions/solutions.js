@@ -3,7 +3,11 @@ import Banner from "@/components/banner";
 import InfoSegment from "@/components/infoSegment";
 import {
     SolutionsBannerImg,
-    SolutionsAirlineTicketsImg
+    SolutionsAirlineTicketsImg,
+    SolutionsAccommodationImg,
+    SolutionsCarRentalImg,
+    SolutionsCorporateEventsImg,
+    SolutionsPromotionPackagesImg
 } from "@/public/img/solutions";
 
 export default function Solutions() {
@@ -26,7 +30,7 @@ export default function Solutions() {
             buttonLink: "/cotacao-passagens"
         },
         {
-            imgSrc: "/img/hotel.png",
+            imgSrc: SolutionsAccommodationImg,
             imgAlt: "Hospedagem",
             isImgRight: true,
             title: "Hospedagem",
@@ -36,7 +40,7 @@ export default function Solutions() {
             buttonLink: "/cotacao-hospedagem"
         },
         {
-            imgSrc: "/img/carRental.png",
+            imgSrc: SolutionsCarRentalImg,
             imgAlt: "Aluguel de carros",
             isImgRight: false,
             title: "Aluguel de carros",
@@ -46,10 +50,20 @@ export default function Solutions() {
             buttonLink: "/cotacao-carros"
         },
         {
-            imgSrc: "/img/corporateEvents.png",
+            imgSrc: SolutionsCorporateEventsImg,
             imgAlt: "Eventos corporativos",
             isImgRight: true,
             title: "Eventos corporativos",
+            mainParagraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.",
+            secondaryParagraph: "Suspendisse et rhoncus nisl, eu tempor urna.",
+            buttonText: "Solicitar cotação",
+            buttonLink: "/cotacao-eventos"
+        },
+        {
+            imgSrc: SolutionsPromotionPackagesImg,
+            imgAlt: "Pacotes promocionais",
+            isImgRight: false,
+            title: "Pacotes promocionais",
             mainParagraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.",
             secondaryParagraph: "Suspendisse et rhoncus nisl, eu tempor urna.",
             buttonText: "Solicitar cotação",
