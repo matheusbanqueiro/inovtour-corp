@@ -101,9 +101,8 @@ export default function Solutions() {
                             <Image
                                 src={segment.isImgRight ? SolutionsWatermark2Img : SolutionsWatermark1Img}
                                 alt="Watermark"
-                                width={400}
+                                width={800}
                                 height={200}
-                                className="opacity-10"
                             />
                         </div>
                     )}

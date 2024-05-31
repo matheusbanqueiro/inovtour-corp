@@ -43,7 +43,6 @@ export default function Layout(props) {
           cardType: "summary_large_image"
         }}
       />
-
       <div
         className={cx(
           props?.fontStyle,
@@ -54,7 +53,6 @@ export default function Layout(props) {
         ) : (
           <Navbar {...props} />
         )}
-
         <div>{children}</div>
 
         <Footer {...props} />
