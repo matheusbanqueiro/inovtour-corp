@@ -25,6 +25,7 @@ export default function RootLayout({
       className={cx(inter.variable, lora.variable)}>
       <body className="antialiased text-gray-800 dark:bg-black dark:text-gray-400">
         <Providers>{children}</Providers>
+        22222123123123
       </body>
     </html>
   );
