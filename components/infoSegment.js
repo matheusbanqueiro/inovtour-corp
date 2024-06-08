@@ -4,13 +4,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import Link from 'next/link';
+import arrowRight from "@/components/icons/arrow-right.svg";
 
 const InfoSegment = ({ imgSrc, imgAlt, isImgRight = false, title, mainParagraph, secondaryParagraph, buttonText, buttonLink }) => {
   return (
     <div className="py-12 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
-          <h2 className="text-2xl font-bold text-gray-900">
+          <h2 className="text-5xl font-medium text-gray-900">
             {title}
           </h2>
         </div>
@@ -33,8 +34,14 @@ const InfoSegment = ({ imgSrc, imgAlt, isImgRight = false, title, mainParagraph,
               {secondaryParagraph}
             </p>
             <Link href={buttonLink} passHref>
-              <button className="inline-block bg-blue-700 text-white px-6 py-3 rounded hover:bg-blue-800">
+              <button className=" flex bg-main items-center gap-2 text-white px-6 py-3 rounded hover:bg-main/90">
                 {buttonText}
+                <Image
+                    src={arrowRight}
+                    alt="arrow"
+                    width={18}
+                    height={18}
+                  />
               </button>
             </Link>
           </div>
