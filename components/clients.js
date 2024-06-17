@@ -35,7 +35,7 @@ const Clients = () => {
     <div className="py-12 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-2xl font-bold text-gray-900">
+          <h2 className="text-5xl font-bold text-gray-900">
             Conheça nossos Clientes
           </h2>
         </div>
@@ -58,7 +58,7 @@ const Clients = () => {
         <div className="mt-10 text-center">
           <a
             href="/quero-ser-cliente"
-            className="inline-block bg-blue-700 text-white px-6 py-3 rounded hover:bg-blue-800"
+            className="inline-block font-bold bg-main text-white px-6 py-3 rounded hover:bg-main/90"
           >
             Quero ser cliente
           </a>

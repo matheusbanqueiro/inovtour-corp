@@ -1,85 +1,45 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
+import arrowRight from "@/components/icons/arrow-right.svg";
+import Airplane from "@/components/icons/airplane.svg";
+import Car from "@/components/icons/car.svg";
+import Hotel from "@/components/icons/hotel.svg";
 
 const solutions = [
   {
     title: "Passagens aéreas",
-    icon: (
-      <svg
-        className="w-12 h-12 text-blue-500 mx-auto"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M10.5 6.5L3 21h4l2-4h8.5a2.5 2.5 0 002.5-2.5v-1a2.5 2.5 0 00-2.5-2.5H7l3.5-4.5z"
-        />
-      </svg>
-    ),
+    icon: Airplane,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
     button: "Solicite cotação",
-    link: "/cotacao-passagens",
+    link: "/cotacao-passagens"
   },
   {
     title: "Hospedagem",
-    icon: (
-      <svg
-        className="w-12 h-12 text-blue-500 mx-auto"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M8 17l4-4 4 4m0 0v-8a4 4 0 00-4-4 4 4 0 00-4 4v8z"
-        />
-      </svg>
-    ),
+    icon: Hotel,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
     button: "Solicite cotação",
-    link: "/cotacao-hospedagem",
+    link: "/cotacao-hospedagem"
   },
   {
     title: "Aluguel de carros",
-    icon: (
-      <svg
-        className="w-12 h-12 text-blue-500 mx-auto"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M5 13l4 4L19 7"
-        />
-      </svg>
-    ),
+    icon: Car,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
     button: "Solicite cotação",
-    link: "/cotacao-carros",
-  },
+    link: "/cotacao-carros"
+  }
 ];
 
 const Solutions = () => {
   return (
-    <div className="py-12 bg-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="bg-gray-100 py-12">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
-          <h2 className="text-base text-blue-600 font-semibold tracking-wide uppercase">
+          <h2 className="text-center text-5xl font-medium text-dark1 lg:text-3xl">
             Explore nossas soluções
           </h2>
         </div>
@@ -89,20 +49,31 @@ const Solutions = () => {
             {solutions.map((solution, index) => (
               <div
                 key={index}
-                className="bg-white shadow-lg rounded-lg p-6 max-w-sm flex flex-col items-center"
-              >
-                <div className="mb-4">{solution.icon}</div>
-                <h3 className="text-lg font-semibold mb-2 text-center">
+                className="flex max-w-sm flex-col items-center rounded-lg bg-white p-6 shadow-lg gap-4">
+                <div className="mb-4 h-24">
+                  <Image
+                    src={solution.icon}
+                    alt={solution.title}
+                    width={100}
+                    height={100}
+                  />
+                </div>
+                <h3 className="mb-2 text-center text-2xl font-semibold">
                   {solution.title}
                 </h3>
-                <p className="text-gray-600 text-center mb-4">
-                  {solution.description}
+                <p className="mb-4 w-52 text-base text-left text-gray-600">
+                  "{solution.description}"
                 </p>
                 <a
                   href={solution.link}
-                  className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-                >
+                  className="flex items-center gap- rounded bg-main px-4 py-2 text-sm font-semibold text-white hover:bg-main/90">
                   {solution.button}
+                  <Image
+                    src={arrowRight}
+                    alt="arrow"
+                    width={18}
+                    height={18}
+                  />
                 </a>
               </div>
             ))}

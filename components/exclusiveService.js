@@ -9,7 +9,7 @@ const ExclusiveService = () => {
     <div className="py-12 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
-          <h2 className="text-2xl font-bold text-gray-900">
+          <h2 className="text-xl font-bold text-gray-900">
             Atendimento Exclusivo e Personalizado
           </h2>
         </div>
@@ -33,7 +33,7 @@ const ExclusiveService = () => {
             </p>
             <a
               href="/saiba-mais"
-              className="inline-block bg-blue-700 text-white px-6 py-3 rounded hover:bg-blue-800"
+              className="bg-main inline-block text-white font-bold text-lg px-6 py-3 rounded hover:bg-main/90"
             >
               Saiba mais
             </a>

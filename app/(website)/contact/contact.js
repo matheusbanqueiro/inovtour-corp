@@ -9,7 +9,30 @@ import {
   EnvelopeIcon,
   PhoneIcon
 } from "@heroicons/react/24/outline";
+import Phone from "@/components/icons/phone.svg";
+import MapPin from "@/components/icons/map-pin.svg";
+import MessageCircle from "@/components/icons/message-circle.svg";
+import Email from "@/components/icons/mail.svg";
+import Unsplash from "@/components/img/unsplash.png";
+
+import Image from "next/image";
+
 export default function Contact({ settings }) {
+  const contact = [
+    {
+      icon: Phone,
+      title: "Tel.: (11) 5524-9700"
+    },
+    {
+      icon: Email,
+      title: "E-mail: exclusivo@inovtour.com"
+    },
+    {
+      icon: MessageCircle,
+      title: "Atendimento 24h"
+    }
+  ];
+
   const {
     register,
     handleSubmit,
@@ -23,6 +46,8 @@ export default function Contact({ settings }) {
   });
   const [isSuccess, setIsSuccess] = useState(false);
   const [message, setMessage] = useState(false);
+  const [contactPreference, setContactPreference] = useState("");
+
   // Please update the Access Key in the Sanity CMS - Site Congig Page
   const apiKey = settings?.w3ckey || "YOUR_ACCESS_KEY_HERE";
 
@@ -44,166 +69,164 @@ export default function Contact({ settings }) {
   });
 
   return (
-    <Container>
-      <h1 className="mt-2 mb-3 text-3xl font-semibold tracking-tight text-center lg:leading-snug text-brand-primary lg:text-4xl dark:text-white">
-        Contact
-      </h1>
-      <div className="text-center">
-        <p className="text-lg">We are a here to help.</p>
+    <>
+      <div className="">
+        <Image
+          src={Unsplash}
+          width={200}
+          height={200}
+          alt={""}
+          className="w-full"
+        />
       </div>
-
-      <div className="grid my-10 md:grid-cols-2">
-        <div className="my-10">
-          <h2 className="text-2xl font-semibold dark:text-white">
-            Contact Stablo
-          </h2>
-          <p className="max-w-sm mt-5">
-            Have something to say? We are here to help. Fill up the
-            form or send email or call phone.
+      <div className="absolute top-20 flex w-full flex-col items-center md:flex-row">
+        <div className="mx-auto rounded-lg bg-white p-6 md:w-1/2">
+          <h3 className="mb-4 text-center text-3xl font-semibold text-gray-900">
+            Falar com os agentes da Inovtour
+          </h3>
+          <p className="mb-4 text-center text-sm text-gray-700">
+            Preencha as informações e nossos especialistas irão entrar
+            em contato com você.
           </p>
+          <form className="">
+            <div className="flex flex-col items-center justify-center gap-6">
+              <div className="">
+                <select className="rounded-md border-2 text-grey1 px-2 w-72 bg-white text-left py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                  <option className="" value="" disabled selected>
+                    Assunto
+                  </option>
+                  <option value="assunto1">Assunto1</option>
+                  <option value="assunto2">Assunto2</option>
+                  <option value="assunto3">Assunto3</option>
+                  <option value="assunto4">Assunto4</option>
+                </select>
+              </div>
+              <div className="">
+                <input
+                  type="text"
+                  className="rounded-md border-2 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Nome"
+                />
+              </div>
+              <div className="">
+                <input
+                  type="email"
+                  className="rounded-md border-2 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="E-mail"
+                />
+              </div>
+              <div className="">
+                <input
+                  type="tel"
+                  className="rounded-md border-2 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Telefone"
+                />
+              </div>
+              <div className="">
+                <p className="flex gap-5 py-3 text-gray-700">
+                  Preferência de contato{" "}
+                  <span className="text-grey2">(Opcional)</span>
+                </p>
+                <div className="flex space-x-3">
+                  <button
+                    type="button"
+                    className={`rounded-md border-2 border-main px-3 py-2 text-sm font-semibold text-main hover:bg-main/10 focus:outline-none ${
+                      contactPreference === "E-mail"
+                        ? "bg-blue-300 text-white"
+                        : "text-gray-700"
+                    }`}
+                    onClick={() => setContactPreference("E-mail")}>
+                    E-mail
+                  </button>
+                  <button
+                    type="button"
+                    className={`rounded-md border-2 border-main px-3 py-2 text-sm font-semibold text-main hover:bg-main/10 focus:outline-none ${
+                      contactPreference === "Telefone"
+                        ? "bg-blue-300  text-white"
+                        : "text-gray-700"
+                    }`}
+                    onClick={() => setContactPreference("Telefone")}>
+                    Telefone
+                  </button>
+                  <button
+                    type="button"
+                    className={`rounded-md border-2 border-main px-3 py-2 text-sm font-semibold text-main hover:bg-main/10 focus:outline-none ${
+                      contactPreference === "WhatsApp"
+                        ? "bg-blue-300 text-white"
+                        : "text-gray-700"
+                    }`}
+                    onClick={() => setContactPreference("WhatsApp")}>
+                    WhatsApp
+                  </button>
+                </div>
+              </div>
 
-          <div className="mt-5">
-            <div className="flex items-center mt-2 space-x-2 text-dark-600 dark:text-gray-400">
-              <MapPinIcon className="w-4 h-4" />
-              <span>1734 Sanfransico, CA 93063</span>
+              <div className="">
+                <textarea
+                  className="w-72 rounded-md border-2 border-grey3 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  rows="4"
+                  placeholder="Explique sua necessidade"></textarea>
+              </div>
+              <div className="justi flex items-center">
+                <input
+                  type="checkbox"
+                  id="consent"
+                  className="mr-2"
+                />
+                <label htmlFor="consent" className="text-gray-700">
+                  Concordo em receber informações
+                </label>
+              </div>
+              <div className="flex justify-center">
+                <button
+                  type="submit"
+                  className=" rounded bg-main px-4 py-4 text-sm font-bold text-white hover:bg-main/80 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                  Quero ser cliente
+                </button>
+              </div>
             </div>
-            {settings?.email && (
-              <div className="flex items-center mt-2 space-x-2 text-dark-600 dark:text-gray-400">
-                <EnvelopeIcon className="w-4 h-4" />
-                <a href={`mailto:${settings.email}`}>
-                  {settings.email}
-                </a>
+          </form>
+        </div>
+      </div>
+      <Container>
+        <div className="flex justify-between py-14">
+          <div className="flex flex-col gap-5 text-left">
+            <p className="text-3xl font-medium">
+              Caso prefira entrar em contato
+            </p>
+            {contact.map((item, index) => (
+              <div key={index} className="flex items-center gap-2">
+                <Image
+                  src={item.icon}
+                  width={28}
+                  height={28}
+                  alt={item.title}
+                />
+                <p className="text-lg text-dark2">{item.title}</p>
               </div>
-            )}
-            {settings?.phone && (
-              <div className="flex items-center mt-2 space-x-2 text-dark-600 dark:text-gray-400">
-                <PhoneIcon className="w-4 h-4" />
-                <a href={`tel:${settings.phone}`}>{settings.phone}</a>
-              </div>
-            )}
+            ))}
+          </div>
+          <div className="flex flex-col gap-5 text-left">
+            <p className="text-3xl font-medium">Nossa localização</p>
+            <div className="flex items-start gap-2">
+              <Image
+                src={MapPin}
+                width={28}
+                height={28}
+                alt={"Map Pin"}
+                className=""
+              />
+              <p className="w-96 text-lg text-dark2">
+                Endereço: Av Dr Chucri Zaidan, S/N - Bloco B Andar 24
+                - Vila São Francisco (Zona Sul), São Paulo, SP
+                <br />
+                <br />
+                CEP: 04711-130
+              </p>
+            </div>
           </div>
         </div>
-        <div>
-          <form onSubmit={handleSubmit(onSubmit)} className="my-10">
-            <input
-              type="checkbox"
-              id=""
-              className="hidden"
-              style={{ display: "none" }}
-              {...register("botcheck")}></input>
-
-            <div className="mb-5">
-              <input
-                type="text"
-                placeholder="Full Name"
-                autoComplete="false"
-                className={`w-full px-4 py-3 border-2 placeholder:text-gray-800 dark:text-white rounded-md outline-none dark:placeholder:text-gray-200 dark:bg-gray-900   focus:ring-4  ${
-                  errors.name
-                    ? "border-red-600 focus:border-red-600 ring-red-100 dark:ring-0"
-                    : "border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-gray-600 dark:focus:border-white dark:ring-0"
-                }`}
-                {...register("name", {
-                  required: "Full name is required",
-                  maxLength: 80
-                })}
-              />
-              {errors.name && (
-                <div className="mt-1 text-red-600">
-                  <small>{errors.name.message}</small>
-                </div>
-              )}
-            </div>
-
-            <div className="mb-5">
-              <label htmlFor="email_address" className="sr-only">
-                Email Address
-              </label>
-              <input
-                id="email_address"
-                type="email"
-                placeholder="Email Address"
-                name="email"
-                autoComplete="false"
-                className={`w-full px-4 py-3 border-2 placeholder:text-gray-800 dark:text-white rounded-md outline-none dark:placeholder:text-gray-200 dark:bg-gray-900   focus:ring-4  ${
-                  errors.email
-                    ? "border-red-600 focus:border-red-600 ring-red-100 dark:ring-0"
-                    : "border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-gray-600 dark:focus:border-white dark:ring-0"
-                }`}
-                {...register("email", {
-                  required: "Enter your email",
-                  pattern: {
-                    value: /^\S+@\S+$/i,
-                    message: "Please enter a valid email"
-                  }
-                })}
-              />
-              {errors.email && (
-                <div className="mt-1 text-red-600">
-                  <small>{errors.email.message}</small>
-                </div>
-              )}
-            </div>
-
-            <div className="mb-3">
-              <textarea
-                name="message"
-                placeholder="Your Message"
-                className={`w-full px-4 py-3 border-2 placeholder:text-gray-800 dark:text-white dark:placeholder:text-gray-200 dark:bg-gray-900   rounded-md outline-none  h-36 focus:ring-4  ${
-                  errors.message
-                    ? "border-red-600 focus:border-red-600 ring-red-100 dark:ring-0"
-                    : "border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-gray-600 dark:focus:border-white dark:ring-0"
-                }`}
-                {...register("message", {
-                  required: "Enter your Message"
-                })}
-              />
-              {errors.message && (
-                <div className="mt-1 text-red-600">
-                  {" "}
-                  <small>{errors.message.message}</small>
-                </div>
-              )}
-            </div>
-
-            <button
-              type="submit"
-              className="w-full py-4 font-semibold text-white transition-colors bg-gray-900 rounded-md hover:bg-gray-800 focus:outline-none focus:ring-offset-2 focus:ring focus:ring-gray-200 px-7 dark:bg-white dark:text-black ">
-              {isSubmitting ? (
-                <svg
-                  className="w-5 h-5 mx-auto text-white dark:text-black animate-spin"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24">
-                  <circle
-                    className="opacity-25"
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke="currentColor"
-                    strokeWidth="4"></circle>
-                  <path
-                    className="opacity-75"
-                    fill="currentColor"
-                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                </svg>
-              ) : (
-                "Send Message"
-              )}
-            </button>
-          </form>
-
-          {isSubmitSuccessful && isSuccess && (
-            <div className="mt-3 text-sm text-center text-green-500">
-              {message || "Success. Message sent successfully"}
-            </div>
-          )}
-          {isSubmitSuccessful && !isSuccess && (
-            <div className="mt-3 text-sm text-center text-red-500">
-              {message || "Something went wrong. Please try later."}
-            </div>
-          )}
-        </div>
-      </div>
-    </Container>
+      </Container>
+    </>
   );
 }
