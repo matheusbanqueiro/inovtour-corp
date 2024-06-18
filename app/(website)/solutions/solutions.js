@@ -40,9 +40,9 @@ export default function Solutions() {
       isImgRight: false,
       title: "Passagens aéreas",
       mainParagraph:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.",
+        "Aqui você encontra as melhores ofertas de passagens aéreas para voos nacionais e internacionais.",
       secondaryParagraph:
-        "Suspendisse et rhoncus nisl, eu tempor urna.",
+        "Quer aproveitar as férias com a família? Ou curtir seu destino preferido? Viagem a trabalho? Não importa o destino, nós temos várias ofertas para você.",
       buttonText: "Solicitar cotação",
       buttonLink: "/cotacao-passagens"
     },
@@ -52,9 +52,9 @@ export default function Solutions() {
       isImgRight: true,
       title: "Hospedagem",
       mainParagraph:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.",
+        "Oferecemos uma seleção cuidadosa de hotéis e acomodações que atendem às necessidades específicas dos viajantes corporativos.",
       secondaryParagraph:
-        "Suspendisse et rhoncus nisl, eu tempor urna.",
+        "Com localização estratégica, comodidades de alta qualidade e serviços personalizados, garantimos que sua estadia seja produtiva e agradável.",
       buttonText: "Solicitar cotação",
       buttonLink: "/cotacao-hospedagem"
     },
@@ -64,9 +64,9 @@ export default function Solutions() {
       isImgRight: false,
       title: "Aluguel de carros",
       mainParagraph:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.",
+        "Proporcionamos soluções de mobilidade para que você tenha mais flexibilidade e agilidade em suas viagens de negócios.",
       secondaryParagraph:
-        "Suspendisse et rhoncus nisl, eu tempor urna.",
+        "Em parceria com as melhores empresas de aluguel de carros, oferecemos uma ampla gama de veículos modernos e confortáveis, garantindo que você chegue aos seus compromissos de forma segura e pontual.",
       buttonText: "Solicitar cotação",
       buttonLink: "/cotacao-carros"
     },
@@ -76,9 +76,9 @@ export default function Solutions() {
       isImgRight: true,
       title: "Eventos corporativos",
       mainParagraph:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.",
+        "Organizamos eventos corporativos completos, desde o planejamento até a execução.",
       secondaryParagraph:
-        "Suspendisse et rhoncus nisl, eu tempor urna.",
+        "Oferecemos locação de espaços, infraestrutura, hospedagem, transporte e catering de alta qualidade. Personalizamos cada detalhe para garantir o sucesso do seu evento.",
       buttonText: "Solicitar cotação",
       buttonLink: "/cotacao-eventos"
     },
@@ -88,9 +88,9 @@ export default function Solutions() {
       isImgRight: false,
       title: "Pacotes promocionais",
       mainParagraph:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.",
+        "Oferecemos pacotes promocionais exclusivos para suas viagens, incluindo passagens aéreas com tarifas especiais, hotelaria de alta qualidade e locação de carros.",
       secondaryParagraph:
-        "Suspendisse et rhoncus nisl, eu tempor urna.",
+        "Aproveite descontos exclusivos e suporte 24/7. Personalizamos os pacotes conforme suas necessidades. Viaje com conforto e economia!",
       buttonText: "Solicitar cotação",
       buttonLink: "/cotacao-eventos"
     }

@@ -12,7 +12,7 @@ const solutions = [
     title: "Passagens aéreas",
     icon: Airplane,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+      "As melhores ofertas de passagens aéreas para voos nacionais e internacionais. Não importa o destino, nós temos várias ofertas para você.",
     button: "Solicite cotação",
     link: "/cotacao-passagens"
   },
@@ -20,7 +20,7 @@ const solutions = [
     title: "Hospedagem",
     icon: Hotel,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+      "Oferecemos uma seleção cuidadosa de hotéis e acomodações que atendem às necessidades específicas dos viajantes corporativos.",
     button: "Solicite cotação",
     link: "/cotacao-hospedagem"
   },
@@ -28,7 +28,7 @@ const solutions = [
     title: "Aluguel de carros",
     icon: Car,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+      "Proporcionamos soluções de mobilidade inteligente e eficiente para que você tenha mais flexibilidade e agilidade em suas viagens de negócios.",
     button: "Solicite cotação",
     link: "/cotacao-carros"
   }
@@ -62,7 +62,7 @@ const Solutions = () => {
                   {solution.title}
                 </h3>
                 <p className="mb-4 w-52 text-base text-left text-gray-600">
-                  "{solution.description}"
+                  {solution.description}
                 </p>
                 <a
                   href={solution.link}

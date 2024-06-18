@@ -11,19 +11,19 @@ import {
 const testimonials = [
   {
     quote:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+      "Serviço impecável! Reservaram minhas passagens aéreas rapidamente e sem complicações. Recomendo!",
     name: "Cody Fisher",
     image: Testimonials1Img
   },
   {
     quote:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+      "A hospedagem foi excelente, com localização estratégica e todo o conforto que eu precisava. Ótima escolha!",
     name: "Kathryn Murphy",
     image: Testimonials2Img
   },
   {
     quote:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+      "Excelente serviço! Passagens aéreas, hotelaria e locação de carro impecáveis. Recomendamos a Inovtour!",
     name: "Theresa Webb",
     image: Testimonials3Img
   }

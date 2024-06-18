@@ -19,8 +19,8 @@ export default function Home() {
     imgAlt: "Atendimento Exclusivo e Personalizado",
     isImgRight: false,
     title: "Atendimento Exclusivo e Personalizado",
-    mainParagraph: "Oferecemos a implantação de um “Posto de Serviço Exclusivo e Personalizado”, nas dependências da INOVTOUR.",
-    secondaryParagraph: "Temos capacidade imediata de implantação de atendimento com qualidade e eficiência, com toda a infraestrutura tecnológica necessária à empresa, garantindo o pleno funcionamento de todas as atividades e operações.",
+    mainParagraph: "Na Inovtour, oferecemos atendimento exclusivo e personalizado para todas as suas necessidades de viagens corporativas. Nossa equipe dedicada está disponível 24/7, garantindo soluções rápidas e eficientes.",
+    secondaryParagraph: "Adaptamos nossos serviços para proporcionar a melhor experiência, com foco em qualidade e satisfação.",
     buttonText: "Saiba mais",
     buttonLink: "/"
   };
