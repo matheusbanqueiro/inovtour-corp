@@ -8,7 +8,7 @@ import arrowRight from "@/components/icons/arrow-right.svg";
 
 const InfoSegment = ({ imgSrc, imgAlt, isImgRight = false, title, mainParagraph, secondaryParagraph, buttonText, buttonLink }) => {
   return (
-    <div className="py-12 bg-gray-100">
+    <div className="py-12 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
           <h2 className="text-5xl font-medium text-gray-900">

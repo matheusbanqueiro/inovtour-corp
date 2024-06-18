@@ -1,120 +1,250 @@
+"use client";
 import Container from "@/components/container";
 import Banner from "@/components/banner";
 import InfoSegment from "@/components/infoSegment";
 import CallToAction from "@/components/callToAction";
-import Image from 'next/image';
-import React from 'react';
+import Image from "next/image";
+import React from "react";
 import {
-    SolutionsBannerImg,
-    SolutionsAirlineTicketsImg,
-    SolutionsAccommodationImg,
-    SolutionsCarRentalImg,
-    SolutionsCorporateEventsImg,
-    SolutionsPromotionPackagesImg,
-    SolutionsCallToActionImg,
-    SolutionsWatermark1Img,
-    SolutionsWatermark2Img
+  SolutionsBannerImg,
+  SolutionsAirlineTicketsImg,
+  SolutionsAccommodationImg,
+  SolutionsCarRentalImg,
+  SolutionsCorporateEventsImg,
+  SolutionsPromotionPackagesImg,
+  SolutionsCallToActionImg,
+  SolutionsWatermark1Img,
+  SolutionsWatermark2Img,
+  SolutionsBannerImg2,
+  SolutionsBannerImg3,
+  SolutionsWatermark3Img
 } from "@/public/img/solutions";
+import CardPrices from "@/components/card-prices";
+import Paris from "@/components/img/paris.jpg";
 
 export default function Solutions() {
+  const bannerImgs = [
+    SolutionsBannerImg,
+    SolutionsBannerImg2,
+    SolutionsBannerImg3
+  ];
+  const bannerTitle =
+    "Transforme suas viagens em experiências excepcionais com nossas soluções completas para passagens aéreas, hospedagem, aluguel de carros e muito mais!";
+  const bannerSubtitle =
+    "Seja para destinos nacionais ou internacionais, temos tudo o que você precisa para viajar com conforto e eficiência";
 
-    const bannerImgs = [
-        SolutionsBannerImg,
-    ];
-    const bannerTitle = 'Transforme suas viagens em experiências excepcionais';
-    const bannerSubtitle = 'Seja para destinos nacionais ou internacionais, temos tudo o que você precisa para viajar com conforto e eficiência';
+  const segments = [
+    {
+      imgSrc: SolutionsAirlineTicketsImg,
+      imgAlt: "Passagens aéreas",
+      isImgRight: false,
+      title: "Passagens aéreas",
+      mainParagraph:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.",
+      secondaryParagraph:
+        "Suspendisse et rhoncus nisl, eu tempor urna.",
+      buttonText: "Solicitar cotação",
+      buttonLink: "/cotacao-passagens"
+    },
+    {
+      imgSrc: SolutionsAccommodationImg,
+      imgAlt: "Hospedagem",
+      isImgRight: true,
+      title: "Hospedagem",
+      mainParagraph:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.",
+      secondaryParagraph:
+        "Suspendisse et rhoncus nisl, eu tempor urna.",
+      buttonText: "Solicitar cotação",
+      buttonLink: "/cotacao-hospedagem"
+    },
+    {
+      imgSrc: SolutionsCarRentalImg,
+      imgAlt: "Aluguel de carros",
+      isImgRight: false,
+      title: "Aluguel de carros",
+      mainParagraph:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.",
+      secondaryParagraph:
+        "Suspendisse et rhoncus nisl, eu tempor urna.",
+      buttonText: "Solicitar cotação",
+      buttonLink: "/cotacao-carros"
+    },
+    {
+      imgSrc: SolutionsCorporateEventsImg,
+      imgAlt: "Eventos corporativos",
+      isImgRight: true,
+      title: "Eventos corporativos",
+      mainParagraph:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.",
+      secondaryParagraph:
+        "Suspendisse et rhoncus nisl, eu tempor urna.",
+      buttonText: "Solicitar cotação",
+      buttonLink: "/cotacao-eventos"
+    },
+    {
+      imgSrc: SolutionsPromotionPackagesImg,
+      imgAlt: "Pacotes promocionais",
+      isImgRight: false,
+      title: "Pacotes promocionais",
+      mainParagraph:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.",
+      secondaryParagraph:
+        "Suspendisse et rhoncus nisl, eu tempor urna.",
+      buttonText: "Solicitar cotação",
+      buttonLink: "/cotacao-eventos"
+    }
+  ];
 
-    const segments = [
-        {
-            imgSrc: SolutionsAirlineTicketsImg,
-            imgAlt: "Passagens aéreas",
-            isImgRight: false,
-            title: "Passagens aéreas",
-            mainParagraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.",
-            secondaryParagraph: "Suspendisse et rhoncus nisl, eu tempor urna.",
-            buttonText: "Solicitar cotação",
-            buttonLink: "/cotacao-passagens"
-        },
-        {
-            imgSrc: SolutionsAccommodationImg,
-            imgAlt: "Hospedagem",
-            isImgRight: true,
-            title: "Hospedagem",
-            mainParagraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.",
-            secondaryParagraph: "Suspendisse et rhoncus nisl, eu tempor urna.",
-            buttonText: "Solicitar cotação",
-            buttonLink: "/cotacao-hospedagem"
-        },
-        {
-            imgSrc: SolutionsCarRentalImg,
-            imgAlt: "Aluguel de carros",
-            isImgRight: false,
-            title: "Aluguel de carros",
-            mainParagraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.",
-            secondaryParagraph: "Suspendisse et rhoncus nisl, eu tempor urna.",
-            buttonText: "Solicitar cotação",
-            buttonLink: "/cotacao-carros"
-        },
-        {
-            imgSrc: SolutionsCorporateEventsImg,
-            imgAlt: "Eventos corporativos",
-            isImgRight: true,
-            title: "Eventos corporativos",
-            mainParagraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.",
-            secondaryParagraph: "Suspendisse et rhoncus nisl, eu tempor urna.",
-            buttonText: "Solicitar cotação",
-            buttonLink: "/cotacao-eventos"
-        },
-        {
-            imgSrc: SolutionsPromotionPackagesImg,
-            imgAlt: "Pacotes promocionais",
-            isImgRight: false,
-            title: "Pacotes promocionais",
-            mainParagraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus.",
-            secondaryParagraph: "Suspendisse et rhoncus nisl, eu tempor urna.",
-            buttonText: "Solicitar cotação",
-            buttonLink: "/cotacao-eventos"
-        }
-    ];
+  const cardsData = [
+    {
+      local: "Paris",
+      value: "100,00",
+      imagem: Paris
+    },
+    {
+      local: "Londres",
+      value: "200,00",
+      imagem: Paris
+    },
+    {
+      local: "Nova York",
+      value: "300,00",
+      imagem: Paris
+    },
+    {
+      local: "Tóquio",
+      value: "400,00",
+      imagem: Paris
+    },
+    {
+      local: "Sydney",
+      value: "500,00",
+      imagem: Paris
+    },
+    {
+      local: "Berlim",
+      value: "600,00",
+      imagem: Paris
+    },
+    {
+      local: "Roma",
+      value: "700,00",
+      imagem: Paris
+    },
+    {
+      local: "Madrid",
+      value: "800,00",
+      imagem: Paris
+    },
+    {
+      local: "Moscou",
+      value: "900,00",
+      imagem: Paris
+    },
+    {
+      local: "Dubai",
+      value: "1000,00",
+      imagem: Paris
+    }
+  ];
 
-    return (
-        <Container>
-            <Banner 
-                images={bannerImgs} 
-                title={bannerTitle} 
-                subtitle={bannerSubtitle} 
+  return (
+    <>
+      <Banner
+        images={bannerImgs}
+        title={bannerTitle}
+        subtitle={bannerSubtitle}
+      />
+      <h1 className="mt-36 text-center text-4xl font-bold text-maindark">
+        Saiba mais sobre as soluções INOVTOUR
+      </h1>
+      <div>
+        {segments.map((segment, index) => (
+          <React.Fragment key={index}>
+            <InfoSegment
+              imgSrc={segment.imgSrc}
+              imgAlt={segment.imgAlt}
+              isImgRight={segment.isImgRight}
+              title={segment.title}
+              mainParagraph={segment.mainParagraph}
+              secondaryParagraph={segment.secondaryParagraph}
+              buttonText={segment.buttonText}
+              buttonLink={segment.buttonLink}
             />
-            {segments.map((segment, index) => (
-                <React.Fragment key={index}>
-                    <InfoSegment
-                        imgSrc={segment.imgSrc}
-                        imgAlt={segment.imgAlt}
-                        isImgRight={segment.isImgRight}
-                        title={segment.title}
-                        mainParagraph={segment.mainParagraph}
-                        secondaryParagraph={segment.secondaryParagraph}
-                        buttonText={segment.buttonText}
-                        buttonLink={segment.buttonLink}
-                    />
-                    {index < segments.length - 1 && (
-                        <div className="relative py-12 flex justify-center">
-                            <Image
-                                src={segment.isImgRight ? SolutionsWatermark2Img : SolutionsWatermark1Img}
-                                alt="Watermark"
-                                width={800}
-                                height={200}
-                            />
-                        </div>
-                    )}
-                </React.Fragment>
-            ))}
-            <CallToAction
-                backgroundImage={SolutionsCallToActionImg}
-                title="Gostou das opções de serviços que oferecemos?"
-                subtitle="Nossos agentes estão à sua espera"
-                buttonText="Sua jornada começa aqui"
-                buttonLink="/contact"
-            />
-        </Container>
-    );
+            {index === 0 && (
+              <div className="py-6 ">
+                <Image
+                  src={SolutionsWatermark1Img}
+                  alt="Watermark"
+                  width={800}
+                  height={200}
+                  className="w-full"
+                />
+              </div>
+            )}
+            {index === 1 && (
+              <div className="py-6 ">
+                <Image
+                  src={SolutionsWatermark2Img}
+                  alt="Watermark"
+                  width={800}
+                  height={200}
+                  className="w-full"
+                />
+              </div>
+            )}
+            {index === 2 && (
+              <div className="py-6 ">
+                <Image
+                  src={SolutionsWatermark1Img}
+                  alt="Watermark"
+                  width={800}
+                  height={200}
+                  className="w-full"
+                />
+              </div>
+            )}
+            {index === 3 && (
+              <div className="py-6 ">
+                <Image
+                  src={SolutionsWatermark3Img}
+                  alt="Watermark"
+                  width={800}
+                  height={200}
+                  className="w-full"
+                />
+              </div>
+            )}
+          </React.Fragment>
+        ))}
+      </div>
+      <h1 className="mb-4 mt-36 text-center text-4xl font-bold text-maindark">
+        Confira alguns serviços com preço exclusivo
+      </h1>
+      <div className="mb-8 mt-8 flex flex-col gap-3 bg-maindark py-8">
+        <div>
+          <h1 className="text-center text-2xl font-bold text-white2">
+            Destinos nacionais
+          </h1>
+          <CardPrices cardsData={cardsData} />
+        </div>
+        <div className="mt-16">
+          <h1 className="text-center text-2xl font-bold text-white2">
+            Destinos internacionais
+          </h1>
+          <CardPrices cardsData={cardsData} />
+        </div>
+      </div>
+      <Container>
+        <CallToAction
+          backgroundImage={SolutionsCallToActionImg}
+          title="Gostou das opções de serviços que oferecemos?"
+          subtitle="Nossos agentes estão à sua espera"
+          buttonText="Sua jornada começa aqui"
+          buttonLink="/contact"
+        />
+      </Container>
+    </>
+  );
 }

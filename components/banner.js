@@ -1,88 +1,49 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useEffect, memo } from "react";
+import Image from "next/image";
 
 const Banner = ({ images, title, subtitle }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
-    console.log('Banner parameters:', { images, title, subtitle });
-  }, [images, title, subtitle]);
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 6000); // Muda a imagem a cada 6 segundos
 
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    return () => clearInterval(interval);
+  }, [images.length]);
+
+  const handleClick = (index) => {
+    setCurrentImageIndex(index);
   };
-
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-  };
-
-  if (!images || images.length === 0) {
-    return <div>Loading...</div>;
-  }
 
   return (
-    <div style={{ ...styles.container, backgroundImage: `url(${images[currentIndex].src})` }}>
-      <div style={styles.overlay}>
-        <h1 style={styles.title}>{title}</h1>
-        <p style={styles.subtitle}>{subtitle}</p>
-        <div style={styles.controls}>
-          <button onClick={handlePrev} style={styles.button}>Prev</button>
-          <button onClick={handleNext} style={styles.button}>Next</button>
+    <div className="relative">
+      <Image
+        src={images[currentImageIndex]}
+        width={900}
+        height={900}
+        alt="imagem banner"
+        className="w-full"
+      />
+      <div className="absolute bottom-0 left-0 right-0 top-28 p-6">
+        <h1 className="text-center text-4xl text-white">{title}</h1>
+        <p className="mt-8 text-center text-sm text-white">
+          {subtitle}
+        </p>
+        <div className="mt-12 flex justify-center gap-3">
+          {images.map((_, index) => (
+            <span
+              key={index}
+              className={`cursor-pointer rounded-full p-2 ${index === currentImageIndex ? 'bg-maindark' : 'bg-grey3'}`}
+              onClick={() => handleClick(index)}
+            ></span>
+          ))}
         </div>
       </div>
     </div>
   );
 };
 
-Banner.propTypes = {
-  images: PropTypes.arrayOf(PropTypes.string).isRequired,
-  title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string.isRequired,
-};
-
-const styles = {
-  container: {
-    position: 'relative',
-    height: '275px',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-  },
-  overlay: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    color: 'white',
-    textAlign: 'center',
-    padding: '0 20px',
-  },
-  title: {
-    fontSize: '24px',
-    fontWeight: 'bold',
-  },
-  subtitle: {
-    fontSize: '16px',
-    marginTop: '10px',
-  },
-  controls: {
-    marginTop: '20px',
-  },
-  button: {
-    backgroundColor: 'white',
-    color: 'black',
-    border: 'none',
-    padding: '10px 20px',
-    cursor: 'pointer',
-    margin: '0 10px',
-  },
-};
-
-export default Banner;
+export default memo(Banner);
