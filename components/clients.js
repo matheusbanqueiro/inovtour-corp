@@ -57,7 +57,7 @@ const Clients = () => {
 
         <div className="mt-10 text-center">
           <a
-            href="/quero-ser-cliente"
+            href="/contact"
             className="inline-block font-bold bg-main text-white px-6 py-3 rounded hover:bg-main/90"
           >
             Quero ser cliente

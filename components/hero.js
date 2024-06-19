@@ -22,7 +22,7 @@ export default function Hero() {
         <p className="text-dark2 text-lg w-1/2">
           Consultoria, Soluções em viagens e eventos corporativos nacionais e internacionais
         </p>
-        <Link href="/saiba-mais" className="px-6 py-3 bg-main text-white text-lg rounded hover:bg-maindark/90">
+        <Link href="/solutions" className="px-6 py-3 bg-main text-white text-lg rounded hover:bg-maindark/90">
           Saiba mais
         </Link>
       </div>
