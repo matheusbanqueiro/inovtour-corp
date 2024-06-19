@@ -14,7 +14,6 @@ export default function Navbar(props) {
     { label: "Soluções", href: "/solutions" },
     { label: "Quem Somos", href: "/about" },
     { label: "Contato", href: "/contact" },
-    { label: "Blog", href: "/blog" }
   ];
 
   const mobileMenu = [...menuItems];
@@ -55,10 +54,10 @@ export default function Navbar(props) {
                   ))}
                 </div>
                 <div className="hidden md:flex items-center space-x-4">
-                  <Link href="/login" className={navStyles.button}>
+                  <Link href="https://app.reservafacil.tur.br/v2/login?returnUrl=%2Finicio" className={navStyles.button}>
                     Login
                   </Link>
-                  <Link href="/contact-specialist" className={navStyles.buttonSpecialist}>
+                  <Link href="/contact" className={navStyles.buttonSpecialist}>
                     Fale com especialista
                   </Link>
                 </div>

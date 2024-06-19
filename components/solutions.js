@@ -7,6 +7,9 @@ import Airplane from "@/components/icons/airplane.svg";
 import Car from "@/components/icons/car.svg";
 import Hotel from "@/components/icons/hotel.svg";
 
+
+const link = "#contact-form"
+
 const solutions = [
   {
     title: "Passagens aéreas",
@@ -14,7 +17,7 @@ const solutions = [
     description:
       "As melhores ofertas de passagens aéreas para voos nacionais e internacionais. Não importa o destino, nós temos várias ofertas para você.",
     button: "Solicite cotação",
-    link: "/cotacao-passagens"
+    link: link
   },
   {
     title: "Hospedagem",
@@ -22,7 +25,7 @@ const solutions = [
     description:
       "Oferecemos uma seleção cuidadosa de hotéis e acomodações que atendem às necessidades específicas dos viajantes corporativos.",
     button: "Solicite cotação",
-    link: "/cotacao-hospedagem"
+    link: link
   },
   {
     title: "Aluguel de carros",
@@ -30,9 +33,16 @@ const solutions = [
     description:
       "Proporcionamos soluções de mobilidade inteligente e eficiente para que você tenha mais flexibilidade e agilidade em suas viagens de negócios.",
     button: "Solicite cotação",
-    link: "/cotacao-carros"
+    link: link
   }
 ];
+
+const handleScrollToForm = (e, link) => {
+  e.preventDefault();
+  document.querySelector(link).scrollIntoView({
+    behavior: 'smooth'
+  });
+};
 
 const Solutions = () => {
   return (
@@ -66,6 +76,7 @@ const Solutions = () => {
                 </p>
                 <a
                   href={solution.link}
+                  onClick={(e) => handleScrollToForm(e, solution.link)}
                   className="flex items-center gap- rounded bg-main px-4 py-2 text-sm font-semibold text-white hover:bg-main/90">
                   {solution.button}
                   <Image

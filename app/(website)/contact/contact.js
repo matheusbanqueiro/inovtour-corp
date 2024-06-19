@@ -1,23 +1,15 @@
 "use client";
 
 import Container from "@/components/container";
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import useWeb3Forms from "@web3forms/react";
-import {
-  MapPinIcon,
-  EnvelopeIcon,
-  PhoneIcon
-} from "@heroicons/react/24/outline";
+import Image from "next/image";
+import Unsplash from "@/components/img/unsplash.png";
 import Phone from "@/components/icons/phone.svg";
 import MapPin from "@/components/icons/map-pin.svg";
 import MessageCircle from "@/components/icons/message-circle.svg";
 import Email from "@/components/icons/mail.svg";
-import Unsplash from "@/components/img/unsplash.png";
+import FormFields from "@/components/formFields"; // Import FormFields
 
-import Image from "next/image";
-
-export default function Contact({ settings }) {
+export default function Contact() {
   const contact = [
     {
       icon: Phone,
@@ -32,41 +24,6 @@ export default function Contact({ settings }) {
       title: "Atendimento 24h"
     }
   ];
-
-  const {
-    register,
-    handleSubmit,
-    reset,
-    watch,
-    control,
-    setValue,
-    formState: { errors, isSubmitSuccessful, isSubmitting }
-  } = useForm({
-    mode: "onTouched"
-  });
-  const [isSuccess, setIsSuccess] = useState(false);
-  const [message, setMessage] = useState(false);
-  const [contactPreference, setContactPreference] = useState("");
-
-  // Please update the Access Key in the Sanity CMS - Site Congig Page
-  const apiKey = settings?.w3ckey || "YOUR_ACCESS_KEY_HERE";
-
-  const { submit: onSubmit } = useWeb3Forms({
-    access_key: apiKey,
-    settings: {
-      from_name: "Inovtour",
-      subject: "New Contact Message from Stablo Website"
-    },
-    onSuccess: (msg, data) => {
-      setIsSuccess(true);
-      setMessage(msg);
-      reset();
-    },
-    onError: (msg, data) => {
-      setIsSuccess(false);
-      setMessage(msg);
-    }
-  });
 
   return (
     <>
@@ -88,104 +45,7 @@ export default function Contact({ settings }) {
             Preencha as informações e nossos especialistas irão entrar
             em contato com você.
           </p>
-          <form className="">
-            <div className="flex flex-col items-center justify-center gap-6">
-              <div className="">
-                <select className="rounded-md border-2 text-grey1 px-2 w-72 bg-white text-left py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                  <option className="" value="" disabled selected>
-                    Assunto
-                  </option>
-                  <option value="assunto1">Assunto1</option>
-                  <option value="assunto2">Assunto2</option>
-                  <option value="assunto3">Assunto3</option>
-                  <option value="assunto4">Assunto4</option>
-                </select>
-              </div>
-              <div className="">
-                <input
-                  type="text"
-                  className="rounded-md border-2 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="Nome"
-                />
-              </div>
-              <div className="">
-                <input
-                  type="email"
-                  className="rounded-md border-2 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="E-mail"
-                />
-              </div>
-              <div className="">
-                <input
-                  type="tel"
-                  className="rounded-md border-2 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="Telefone"
-                />
-              </div>
-              <div className="">
-                <p className="flex gap-5 py-3 text-gray-700">
-                  Preferência de contato{" "}
-                  <span className="text-grey2">(Opcional)</span>
-                </p>
-                <div className="flex space-x-3">
-                  <button
-                    type="button"
-                    className={`rounded-md border-2 border-main px-3 py-2 text-sm font-semibold text-main hover:bg-main/10 focus:outline-none ${
-                      contactPreference === "E-mail"
-                        ? "bg-blue-300 text-white"
-                        : "text-gray-700"
-                    }`}
-                    onClick={() => setContactPreference("E-mail")}>
-                    E-mail
-                  </button>
-                  <button
-                    type="button"
-                    className={`rounded-md border-2 border-main px-3 py-2 text-sm font-semibold text-main hover:bg-main/10 focus:outline-none ${
-                      contactPreference === "Telefone"
-                        ? "bg-blue-300  text-white"
-                        : "text-gray-700"
-                    }`}
-                    onClick={() => setContactPreference("Telefone")}>
-                    Telefone
-                  </button>
-                  <button
-                    type="button"
-                    className={`rounded-md border-2 border-main px-3 py-2 text-sm font-semibold text-main hover:bg-main/10 focus:outline-none ${
-                      contactPreference === "WhatsApp"
-                        ? "bg-blue-300 text-white"
-                        : "text-gray-700"
-                    }`}
-                    onClick={() => setContactPreference("WhatsApp")}>
-                    WhatsApp
-                  </button>
-                </div>
-              </div>
-
-              <div className="">
-                <textarea
-                  className="w-72 rounded-md border-2 border-grey3 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  rows="4"
-                  placeholder="Explique sua necessidade"></textarea>
-              </div>
-              <div className="justi flex items-center">
-                <input
-                  type="checkbox"
-                  id="consent"
-                  className="mr-2"
-                />
-                <label htmlFor="consent" className="text-gray-700">
-                  Concordo em receber informações
-                </label>
-              </div>
-              <div className="flex justify-center">
-                <button
-                  type="submit"
-                  className=" rounded bg-main px-4 py-4 text-sm font-bold text-white hover:bg-main/80 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                  Quero ser cliente
-                </button>
-              </div>
-            </div>
-          </form>
+          <FormFields />
         </div>
       </div>
       <Container>

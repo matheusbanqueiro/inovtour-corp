@@ -33,6 +33,8 @@ export default function Solutions() {
   const bannerSubtitle =
     "Seja para destinos nacionais ou internacionais, temos tudo o que você precisa para viajar com conforto e eficiência";
 
+  const buttonLink = "/contact";
+
   const segments = [
     {
       imgSrc: SolutionsAirlineTicketsImg,
@@ -44,7 +46,7 @@ export default function Solutions() {
       secondaryParagraph:
         "Quer aproveitar as férias com a família? Ou curtir seu destino preferido? Viagem a trabalho? Não importa o destino, nós temos várias ofertas para você.",
       buttonText: "Solicitar cotação",
-      buttonLink: "/cotacao-passagens"
+      buttonLink: buttonLink
     },
     {
       imgSrc: SolutionsAccommodationImg,
@@ -56,7 +58,7 @@ export default function Solutions() {
       secondaryParagraph:
         "Com localização estratégica, comodidades de alta qualidade e serviços personalizados, garantimos que sua estadia seja produtiva e agradável.",
       buttonText: "Solicitar cotação",
-      buttonLink: "/cotacao-hospedagem"
+      buttonLink: buttonLink
     },
     {
       imgSrc: SolutionsCarRentalImg,
@@ -68,7 +70,7 @@ export default function Solutions() {
       secondaryParagraph:
         "Em parceria com as melhores empresas de aluguel de carros, oferecemos uma ampla gama de veículos modernos e confortáveis, garantindo que você chegue aos seus compromissos de forma segura e pontual.",
       buttonText: "Solicitar cotação",
-      buttonLink: "/cotacao-carros"
+      buttonLink: buttonLink
     },
     {
       imgSrc: SolutionsCorporateEventsImg,
@@ -80,7 +82,7 @@ export default function Solutions() {
       secondaryParagraph:
         "Oferecemos locação de espaços, infraestrutura, hospedagem, transporte e catering de alta qualidade. Personalizamos cada detalhe para garantir o sucesso do seu evento.",
       buttonText: "Solicitar cotação",
-      buttonLink: "/cotacao-eventos"
+      buttonLink: buttonLink
     },
     {
       imgSrc: SolutionsPromotionPackagesImg,
@@ -92,7 +94,7 @@ export default function Solutions() {
       secondaryParagraph:
         "Aproveite descontos exclusivos e suporte 24/7. Personalizamos os pacotes conforme suas necessidades. Viaje com conforto e economia!",
       buttonText: "Solicitar cotação",
-      buttonLink: "/cotacao-eventos"
+      buttonLink: buttonLink
     }
   ];
 
@@ -222,7 +224,7 @@ export default function Solutions() {
       <h1 className="mb-4 mt-36 text-center text-4xl font-bold text-maindark">
         Confira alguns serviços com preço exclusivo
       </h1>
-      <div className="mb-8 mt-8 flex flex-col gap-3 bg-maindark py-8">
+      {/* <div className="mb-8 mt-8 flex flex-col gap-3 bg-maindark py-8">
         <div>
           <h1 className="text-center text-2xl font-bold text-white2">
             Destinos nacionais
@@ -235,7 +237,7 @@ export default function Solutions() {
           </h1>
           <CardPrices cardsData={cardsData} />
         </div>
-      </div>
+      </div> */}
       <Container>
         <CallToAction
           backgroundImage={SolutionsCallToActionImg}

@@ -115,13 +115,6 @@ export default function Footer(props) {
                 Contato
               </a>
             </li>
-            <li>
-              <a
-                href="/blog"
-                className="text-grey3 hover:text-blue-500">
-                Blog
-              </a>
-            </li>
           </ul>
         </div>
         <div className="">
