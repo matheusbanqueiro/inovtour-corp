@@ -3,7 +3,7 @@ export { default as SolutionsBannerImg2 } from './solutions_banner2.png';
 export { default as SolutionsBannerImg3 } from './solutions_banner3.png';
 export { default as SolutionsBannerImg } from './solutions_banner.png';
 export { default as SolutionsAccommodationImg } from './solutions_accommodation.png';
-export { default as SolutionsCarRentalImg } from './solutions_car_rental.png';
+export { default as SolutionsCarRentalImg } from './solutions_car_rental.jpg';
 export { default as SolutionsCorporateEventsImg } from './solutions_corporate_events.png';
 export { default as SolutionsPromotionPackagesImg } from './solutions_promotional_packages.png';
 export { default as SolutionsCallToActionImg } from './solutions_call_to_action.png';

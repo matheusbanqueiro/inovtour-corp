@@ -98,58 +98,58 @@ export default function Solutions() {
     }
   ];
 
-  const cardsData = [
-    {
-      local: "Paris",
-      value: "100,00",
-      imagem: Paris
-    },
-    {
-      local: "Londres",
-      value: "200,00",
-      imagem: Paris
-    },
-    {
-      local: "Nova York",
-      value: "300,00",
-      imagem: Paris
-    },
-    {
-      local: "Tóquio",
-      value: "400,00",
-      imagem: Paris
-    },
-    {
-      local: "Sydney",
-      value: "500,00",
-      imagem: Paris
-    },
-    {
-      local: "Berlim",
-      value: "600,00",
-      imagem: Paris
-    },
-    {
-      local: "Roma",
-      value: "700,00",
-      imagem: Paris
-    },
-    {
-      local: "Madrid",
-      value: "800,00",
-      imagem: Paris
-    },
-    {
-      local: "Moscou",
-      value: "900,00",
-      imagem: Paris
-    },
-    {
-      local: "Dubai",
-      value: "1000,00",
-      imagem: Paris
-    }
-  ];
+  // const cardsData = [
+  //   {
+  //     local: "Paris",
+  //     value: "100,00",
+  //     imagem: Paris
+  //   },
+  //   {
+  //     local: "Londres",
+  //     value: "200,00",
+  //     imagem: Paris
+  //   },
+  //   {
+  //     local: "Nova York",
+  //     value: "300,00",
+  //     imagem: Paris
+  //   },
+  //   {
+  //     local: "Tóquio",
+  //     value: "400,00",
+  //     imagem: Paris
+  //   },
+  //   {
+  //     local: "Sydney",
+  //     value: "500,00",
+  //     imagem: Paris
+  //   },
+  //   {
+  //     local: "Berlim",
+  //     value: "600,00",
+  //     imagem: Paris
+  //   },
+  //   {
+  //     local: "Roma",
+  //     value: "700,00",
+  //     imagem: Paris
+  //   },
+  //   {
+  //     local: "Madrid",
+  //     value: "800,00",
+  //     imagem: Paris
+  //   },
+  //   {
+  //     local: "Moscou",
+  //     value: "900,00",
+  //     imagem: Paris
+  //   },
+  //   {
+  //     local: "Dubai",
+  //     value: "1000,00",
+  //     imagem: Paris
+  //   }
+  // ];
 
   return (
     <>
