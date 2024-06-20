@@ -68,7 +68,7 @@ export default function Solutions() {
       mainParagraph:
         "Proporcionamos soluções de mobilidade para que você tenha mais flexibilidade e agilidade em suas viagens de negócios.",
       secondaryParagraph:
-        "Em parceria com as melhores empresas de aluguel de carros, oferecemos uma ampla gama de veículos modernos e confortáveis, garantindo que você chegue aos seus compromissos de forma segura e pontual.",
+        "Em parceria com as melhores locadoras, oferecemos uma ampla gama de veículos modernos e confortáveis, garantindo que você chegue aos seus compromissos de forma segura e pontual.",
       buttonText: "Solicitar cotação",
       buttonLink: buttonLink
     },
@@ -90,9 +90,9 @@ export default function Solutions() {
       isImgRight: false,
       title: "Pacotes promocionais",
       mainParagraph:
-        "Oferecemos pacotes promocionais exclusivos para suas viagens, incluindo passagens aéreas com tarifas especiais, hotelaria de alta qualidade e locação de carros.",
+        "Oferecemos pacotes promocionais exclusivos para a sua viagem, incluindo passagens aéreas com tarifas especiais, hotelaria de alta qualidade e locação de veículos.",
       secondaryParagraph:
-        "Aproveite descontos exclusivos e suporte 24/7. Personalizamos os pacotes conforme suas necessidades. Viaje com conforto e economia!",
+        "Aproveite descontos exclusivos e suporte 7/24hs. Personalizamos os pacotes conforme suas necessidades. Viaje com conforto e economia!",
       buttonText: "Solicitar cotação",
       buttonLink: buttonLink
     }
@@ -159,7 +159,7 @@ export default function Solutions() {
         subtitle={bannerSubtitle}
       />
       <h1 className="mt-36 text-center text-4xl font-bold text-maindark">
-        Saiba mais sobre as soluções INOVTOUR
+      Saiba mais sobre as soluções que a INOVTOUR desenvolve para a construção de melhores resultados
       </h1>
       <div>
         {segments.map((segment, index) => (

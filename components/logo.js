@@ -17,7 +17,7 @@ const Logo = ({ logo, logoalt, open }) => {
             sizes="(max-width: 640px) 100vw, 200px"
           />
         ) : (
-          <span className="block text-center">Inovtour</span>
+          <span className="block text-center">INOVTOUR</span>
         )}
       </Link>
       <Link href="/" className="hidden w-28 dark:block">
@@ -29,7 +29,7 @@ const Logo = ({ logo, logoalt, open }) => {
             sizes="(max-width: 640px) 100vw, 200px"
           />
         ) : (
-          <span className="block text-center">Inovtour</span>
+          <span className="block text-center">INOVTOUR</span>
         )}
       </Link>
       <Disclosure.Button

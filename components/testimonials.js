@@ -12,19 +12,19 @@ const testimonials = [
   {
     quote:
       "Serviço impecável! Reservaram minhas passagens aéreas rapidamente e sem complicações. Recomendo!",
-    name: "Cody Fisher",
+    name: "Waldir Santos",
     image: Testimonials1Img
   },
   {
     quote:
       "A hospedagem foi excelente, com localização estratégica e todo o conforto que eu precisava. Ótima escolha!",
-    name: "Kathryn Murphy",
+    name: "Katia Silva",
     image: Testimonials2Img
   },
   {
     quote:
-      "Excelente serviço! Passagens aéreas, hotelaria e locação de carro impecáveis. Recomendamos a Inovtour!",
-    name: "Theresa Webb",
+      "Excelente serviço! Passagens aéreas, hotelaria e locação de carro impecáveis. Recomendamos a INOVTOUR!",
+    name: "João Mendes",
     image: Testimonials3Img
   }
 ];

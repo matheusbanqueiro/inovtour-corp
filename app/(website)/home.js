@@ -19,7 +19,7 @@ export default function Home() {
     imgAlt: "Atendimento Exclusivo e Personalizado",
     isImgRight: false,
     title: "Atendimento Exclusivo e Personalizado",
-    mainParagraph: "Na Inovtour, oferecemos atendimento exclusivo e personalizado para todas as suas necessidades de viagens corporativas. Nossa equipe dedicada está disponível 24/7, garantindo soluções rápidas e eficientes.",
+    mainParagraph: "Na INOVTOUR, oferecemos atendimento exclusivo e personalizado para todas as suas necessidades de viagens corporativas. Nossa equipe dedicada está disponível 24/7, garantindo soluções rápidas e eficientes.",
     secondaryParagraph: "Adaptamos nossos serviços para proporcionar a melhor experiência, com foco em qualidade e satisfação.",
     buttonText: "Saiba mais",
     buttonLink: "/solutions"

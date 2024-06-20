@@ -10,12 +10,12 @@ async function sharedMetaData(params) {
     title: {
       default:
         settings?.title ||
-        "Inovtour",
+        "INOVTOUR",
       template: "%s | Stablo"
     },
     description:
       settings?.description ||
-      "Inovtour cooperates with the best travel agencies in the world to provide you with the best travel experience.",
+      "INOVTOUR cooperates with the best travel agencies in the world to provide you with the best travel experience.",
     keywords: ["travel", "tourism", "vacation", "trip"],
     authors: [{ name: "Govinda Systems DAO" }],
     canonical: settings?.url,
@@ -31,7 +31,7 @@ async function sharedMetaData(params) {
       ]
     },
     twitter: {
-      title: settings?.title || "Inovtour",
+      title: settings?.title || "INOVTOUR",
       card: "summary_large_image"
     },
     robots: {

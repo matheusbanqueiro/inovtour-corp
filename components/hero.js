@@ -17,10 +17,10 @@ export default function Hero() {
       />
       <div className="absolute inset-0 flex flex-col justify-center items-start p-10 gap-8">
         <h1 className="text-dark1 text-5xl font-regular w-[556px]">
-          Sua empresa com atendimento de excelência no gerenciamento de viagens corporativas
+        Sua empresa com atendimento de excelência em Gerenciamento de Viagens Corporativas
         </h1>
         <p className="text-dark2 text-lg w-1/2">
-          Consultoria, Soluções em viagens e eventos corporativos nacionais e internacionais
+        Consultoria e soluções em viagens e eventos corporativos nacionais e internacionais
         </p>
         <Link href="/solutions" className="px-6 py-3 bg-main text-white text-lg rounded hover:bg-maindark/90">
           Saiba mais

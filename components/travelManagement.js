@@ -11,7 +11,7 @@ const TravelManagement = () => {
     "Controle e gerenciamento de processos;",
     "Consultoria e análises de resultados;",
     "Eventos corporativos;",
-    "Atendimento Emergencial 24h diariamente;",
+    "Atendimento Emergencial 7/24hs diariamente;",
     "Seguro viagem;",
     "Negociação com fornecedores e acordos corporativos;",
     "Relatórios gerenciais de resultados;"

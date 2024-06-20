@@ -31,7 +31,7 @@ const solutions = [
     title: "Aluguel de carros",
     icon: Car,
     description:
-      "Proporcionamos soluções de mobilidade inteligente e eficiente para que você tenha mais flexibilidade e agilidade em suas viagens de negócios.",
+      "Proporcionamos soluções de mobilidade para que você tenha mais flexibilidade e agilidade em suas viagens de negócios.",
     button: "Solicite cotação",
     link: link
   }
