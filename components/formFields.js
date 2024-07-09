@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const FormFields = () => {
   const [contactPreference, setContactPreference] = useState("");
   const [formData, setFormData] = useState({
-    assunto: "",
+    subject: "",
     nome: "",
     email: "",
     telefone: "",
@@ -38,18 +38,18 @@ const FormFields = () => {
       <div className="flex flex-col items-center justify-center gap-6">
         <div className="">
           <select
-            name="assunto"
+            name="subject"
             className="rounded-md border-2 text-grey1 px-2 w-72 bg-white text-left py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            value={formData.assunto}
+            value={formData.subject}
             onChange={handleChange}
           >
             <option value="" disabled>
-              Assunto
+              subject
             </option>
-            <option value="assunto1">Assunto1</option>
-            <option value="assunto2">Assunto2</option>
-            <option value="assunto3">Assunto3</option>
-            <option value="assunto4">Assunto4</option>
+            <option value="subject1">subject1</option>
+            <option value="subject2">subject2</option>
+            <option value="subject3">subject3</option>
+            <option value="subject4">subject4</option>
           </select>
         </div>
         <div className="">
