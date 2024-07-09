@@ -1,18 +1,15 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import { NextRequest, NextResponse } from 'next/server';
 import createDeal from './service';
+import { DealPayload } from './model';
 
-const routes = async (req: NextApiRequest, res: NextApiResponse) => {
-  if (req.method === 'POST') {
-    try {
-      const dealData = req.body;
-      const data = await createDeal(dealData);
-      res.status(200).json({ success: true, data });
-    } catch (error) {
-      res.status(500).json({ success: false, error: error.message });
-    }
-  } else {
-    res.status(405).json({ success: false, error: 'Method Not Allowed' });
+export async function POST(req: NextRequest) {
+  try {
+    const body = await req.json();
+
+    await createDeal(body);
+
+    return new NextResponse(null, { status: 201 });
+  } catch (error) {
+    return new NextResponse(null, { status: 500 });
   }
-};
-
-export default routes;
+}

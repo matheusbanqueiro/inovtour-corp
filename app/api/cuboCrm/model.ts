@@ -11,7 +11,8 @@ export class Deal {
         public peoplePhone: string,
         public stageId: number,
         public pipeId: number,
-        public customfields: CustomField[]
+        public customfields: CustomField[],
+        public organizationName: string = ""
     ) { }
 
     static build(dealData: DealPayload) {
@@ -21,6 +22,7 @@ export class Deal {
         const peoplePhone = dealData.peoplePhone;
         const stageId = 305223;
         const pipeId = 301283;
+        const organizationName = dealData.organization;
         const customfields: CustomField[] = [
             {
                 customfieldId: 306055,
@@ -43,7 +45,8 @@ export class Deal {
             peoplePhone,
             stageId,
             pipeId,
-            customfields
+            customfields,
+            organizationName
         );
     }
 }
@@ -56,12 +59,13 @@ export enum ContactPreference {
 
 export class DealPayload {
     constructor(
-        public subject: string,
-        public peopleName: string,
-        public peoplePhone: string,
-        public email: string,
-        public organization: string,
-        public contactPreference: ContactPreference,
-        public details: string
+        public subject: string = "",
+        public peopleName: string = "",
+        public peoplePhone: string = "",
+        public email: string = "",
+        public contactPreference: ContactPreference = ContactPreference.EMAIL,
+        public organization: string = "",
+        public details: string = ""
     ) { }
+
 }

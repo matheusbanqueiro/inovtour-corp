@@ -8,23 +8,17 @@ async function sharedMetaData(params) {
 
   return {
     title: {
-      default:
-        settings?.title ||
-        "INOVTOUR",
+      default: settings?.title || "INOVTOUR",
       template: "%s | Stablo"
     },
-    description:
-      settings?.description ||
-      "INOVTOUR cooperates with the best travel agencies in the world to provide you with the best travel experience.",
+    description: settings?.description || "INOVTOUR cooperates with the best travel agencies in the world to provide you with the best travel experience.",
     keywords: ["travel", "tourism", "vacation", "trip"],
     authors: [{ name: "Govinda Systems DAO" }],
     canonical: settings?.url,
     openGraph: {
       images: [
         {
-          url:
-            urlForImage(settings?.openGraphImage)?.src ||
-            "/img/opengraph.jpg",
+          url: urlForImage(settings?.openGraphImage)?.src || "/img/opengraph.jpg",
           width: 800,
           height: 600
         }
@@ -48,14 +42,10 @@ export async function generateMetadata({ params }) {
 export default async function Layout({ children, params }) {
   const settings = await getSettings();
   return (
-    <>
+    <div id="__next">
       <Navbar {...settings} />
-
       <div>{children}</div>
-
       <Footer {...settings} />
-    </>
+    </div>
   );
 }
-// enable revalidate for all pages in this layout
-// export const revalidate = 60;
