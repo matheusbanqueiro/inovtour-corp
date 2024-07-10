@@ -39,7 +39,7 @@ export default function Contact() {
       <div className="absolute top-20 flex w-full flex-col items-center md:flex-row">
         <div className="mx-auto rounded-lg bg-white p-6 md:w-1/2">
           <h3 className="mb-4 text-center text-3xl font-semibold text-gray-900">
-            Fale com um especialista
+            Fale com a INOVTOUR
           </h3>
           <p className="mb-4 text-center text-sm text-gray-700">
             Preencha as informações e nossos especialistas irão entrar
