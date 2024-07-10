@@ -16,6 +16,26 @@ import {
     GreeImg
 } from './img/clients';
 
+/*
+- PORSCHE
+- AFIP
+- FROOTY
+- GREE
+- ⁠AMAKHA
+- COGRA
+- BRTUV 
+- UPS
+- GPTW
+- AYALLA
+- REAL VALOR
+- BLEND IT
+- ITALTEL
+- FACULDADE DE MEDICINA
+- ⁠FUNDAÇÃO FACULDADE DE MEDICINA
+- ⁠Q-RAILING
+- ⁠FIESP
+*/
+
 const Clients = () => {
   const clients = [
     { name: 'Lacoste', src: LacosteImg },
