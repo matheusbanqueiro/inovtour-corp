@@ -1,75 +1,77 @@
 "use client";
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
-import {
-    LacosteImg, 
-    FiespImg, 
-    ItaltelImg, 
-    GptwImg, 
-    RdiImg, 
-    AmakhaImg, 
-    FitchRatingsImg, 
-    FisImg, 
-    FoxconnImg, 
-    MedicinaUspImg, 
-    GreeImg
-} from './img/clients';
-
-/*
-- PORSCHE
-- AFIP
-- FROOTY
-- GREE
-- ⁠AMAKHA
-- COGRA
-- BRTUV 
-- UPS
-- GPTW
-- AYALLA
-- REAL VALOR
-- BLEND IT
-- ITALTEL
-- FACULDADE DE MEDICINA
-- ⁠FUNDAÇÃO FACULDADE DE MEDICINA
-- ⁠Q-RAILING
-- ⁠FIESP
-*/
+import images from './img/clients';
 
 const Clients = () => {
-  const clients = [
-    { name: 'Lacoste', src: LacosteImg },
-    { name: 'Fiesp', src: FiespImg },
-    { name: 'Italtel', src: ItaltelImg },
-    { name: 'Great Place to Work', src: GptwImg },
-    { name: 'RDI', src: RdiImg },
-    { name: 'Amakha Paris', src: AmakhaImg },
-    { name: 'Fitch Ratings', src: FitchRatingsImg },
-    { name: 'FIS', src: FisImg },
-    { name: 'Foxconn', src: FoxconnImg },
-    { name: 'Medicina USP', src: MedicinaUspImg },
-    { name: 'Gree', src: GreeImg },
-  ];
+  useEffect(() => {
+    console.log('Images in Clients component:', images);
+  }, []);
+
+  if (!images || images.length === 0) {
+    return <div>Carregando...</div>; // Adicionar um estado de carregamento
+  }
+
+  // Estilos Inline
+  const containerStyle = {
+    padding: '3rem 0',
+    backgroundColor: '#f7fafc',
+  };
+
+  const gridStyle = {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
+    gap: '1rem',
+    alignItems: 'center',
+    justifyContent: 'center',
+  };
+
+  const itemStyle = {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    margin: '0.5rem',
+  };
+
+  const headingStyle = {
+    fontSize: '3rem',
+    fontWeight: 'bold',
+    color: '#1a202c',
+    textAlign: 'center',
+  };
+
+  const buttonStyle = {
+    display: 'inline-block',
+    fontWeight: 'bold',
+    backgroundColor: '#1a202c',
+    color: '#fff',
+    padding: '0.75rem 1.5rem',
+    borderRadius: '0.375rem',
+    textAlign: 'center',
+    textDecoration: 'none',
+    transition: 'background-color 0.3s',
+  };
 
   return (
-    <div className="py-12 bg-gray-100">
+    <div style={containerStyle}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h2 className="text-5xl font-bold text-gray-900">
+        <div>
+          <h2 style={headingStyle}>
             Conheça nossos Clientes
           </h2>
         </div>
 
-        <div className="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-center">
-          {clients.map((client, index) => (
-            <div key={index} className="flex items-center justify-center">
+        <div style={gridStyle}>
+          {images.map((client, index) => (
+            <div key={index} style={itemStyle}>
               <Image
                 src={client.src}
                 alt={client.name}
                 width={150}
                 height={80}
                 objectFit="contain"
-                className="grayscale hover:grayscale-0 transition-all duration-300"
+                className="transition-all duration-300"
               />
             </div>
           ))}
@@ -78,7 +80,9 @@ const Clients = () => {
         <div className="mt-10 text-center">
           <a
             href="/contact"
-            className="inline-block font-bold bg-main text-white px-6 py-3 rounded hover:bg-main/90"
+            style={buttonStyle}
+            onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#2d3748'}
+            onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#1a202c'}
           >
             Quero ser cliente
           </a>

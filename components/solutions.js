@@ -16,7 +16,7 @@ const solutions = [
     icon: Airplane,
     description:
       "As melhores ofertas de passagens aéreas para voos nacionais e internacionais. Não importa o destino, nós temos várias ofertas para você.",
-    button: "Solicite cotação",
+    button: "Ver detalhes",
     link: link
   },
   {
@@ -24,7 +24,7 @@ const solutions = [
     icon: Hotel,
     description:
       "Oferecemos uma seleção cuidadosa de hotéis e acomodações que atendem às necessidades específicas dos viajantes corporativos.",
-    button: "Solicite cotação",
+    button: "Ver detalhes",
     link: link
   },
   {
@@ -32,7 +32,7 @@ const solutions = [
     icon: Car,
     description:
       "Proporcionamos soluções de mobilidade para que você tenha mais flexibilidade e agilidade em suas viagens de negócios.",
-    button: "Solicite cotação",
+    button: "Ver detalhes",
     link: link
   }
 ];

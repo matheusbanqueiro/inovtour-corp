@@ -70,7 +70,7 @@ export default function Footer(props) {
             Localização
           </h3>
           <p className="w-[196px] text-left text-xs text-grey3">
-            Av Dr Chucri Zaidan, S/N - Bloco B Andar 24 - Vila São
+            AV. Dr. Chucri Zaidan, S/N - Bloco B Andar 24 - Vila São
             Francisco Zona Sul, São Paulo / SP CEP: 04711-130
           </p>
         </div>

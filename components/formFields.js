@@ -95,7 +95,7 @@ const FormFields = () => {
                 Assunto
               </option>
               <option value="1 - Preciso de suporte, orçamento ou informações sobre uma VIAGEM A TRABALHO">1 - Preciso de suporte, orçamento ou informações sobre uma VIAGEM A TRABALHO</option>
-              <option value="2 - Quero informações sobre PRODUTOS/FERRAMENTAS da INOVETOUR">2 - Quero informações sobre PRODUTOS/FERRAMENTAS da INOVETOUR</option>
+              <option value="2 - Quero informações sobre PRODUTOS/FERRAMENTAS da INOVTOUR">2 - Quero informações sobre PRODUTOS/FERRAMENTAS da INOVTOUR</option>
               <option value="3 - Preciso de suporte, orçamento ou informações para um EVENTO CORPORATIVO">3 - Preciso de suporte, orçamento ou informações para um EVENTO CORPORATIVO</option>
               <option value="4 - Preciso de suporte, orçamento ou informações para uma VIAGEM DE INCENTIVO">4 - Preciso de suporte, orçamento ou informações para uma VIAGEM DE INCENTIVO</option>
               <option value="5 - Agendar uma reunião">5 - Agendar uma reunião</option>

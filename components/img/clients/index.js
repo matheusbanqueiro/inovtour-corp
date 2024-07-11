@@ -1,11 +1,19 @@
-export { default as LacosteImg } from './lacoste.png';
-export { default as FiespImg } from './fiesp.png';
-export { default as ItaltelImg } from './italtel.png';
-export { default as GptwImg } from './great_place_to_work.png';
-export { default as RdiImg } from './rdi.png';
-export { default as AmakhaImg } from './amakha.png';
-export { default as FitchRatingsImg } from './fitch_ratings.png';
-export { default as FisImg } from './fis.png';
-export { default as FoxconnImg } from './foxconn.png';
-export { default as MedicinaUspImg } from './medicina_usp.png';
-export { default as GreeImg } from './gree.png';
+// index.js
+const requireContext = require.context('./', false, /\.(png|jpe?g|svg)$/);
+
+const images = [];
+const imagesSet = new Set();
+
+requireContext.keys().forEach((file) => {
+  const name = file.replace('./', '').replace(/\.(png|jpe?g|svg)$/, '').replace(/_/g, ' ').replace(/-/g, ' ');
+  const src = requireContext(file).default;
+
+  if (!imagesSet.has(src)) {
+    imagesSet.add(src);
+    images.push({ name, src });
+  }
+});
+
+console.log('All images:', images);
+
+export default images;
