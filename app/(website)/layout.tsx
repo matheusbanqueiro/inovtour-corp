@@ -49,3 +49,5 @@ export default async function Layout({ children, params }) {
     </div>
   );
 }
+
+export const revalidate = 60;
