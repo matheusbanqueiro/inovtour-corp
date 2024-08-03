@@ -148,7 +148,7 @@ export default function Footer({
       </div>
 
       <div className="bg-dark1 py-2 text-center text-sm font-semibold text-white">
-        Desenvolvido por {copyright}
+      Desenvolvido por Govinda Systems DAO
       </div>
     </div>
   );
