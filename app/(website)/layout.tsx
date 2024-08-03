@@ -13,7 +13,7 @@ async function sharedMetaData(params) {
       template: "%s | Stablo"
     },
     description: settings?.description || "INOVTOUR cooperates with the best travel agencies in the world to provide you with the best travel experience.",
-    keywords: ["travel", "tourism", "vacation", "trip111111"],
+    keywords: ["travel", "tourism", "vacation", "trip"],
     authors: [{ name: "Govinda Systems DAO" }],
     canonical: settings?.url,
     openGraph: {
@@ -33,10 +33,15 @@ async function sharedMetaData(params) {
       index: true,
       follow: true
     },
+    facebook: {
+      domain: {
+        verification: "ynb94sa6pbk2f2tmtaaq73h3ks0u6f"
+      }
+    },
     additionalMetaTags: [
       {
         name: "facebook-domain-verification",
-        content: process.env.NEXT_PUBLIC_META_TAG
+        content: "ynb94sa6pbk2f2tmtaaq73h3ks0u6f"
       }
     ]
   };
@@ -51,7 +56,7 @@ export default async function Layout({ children, params }) {
   return (
     <div id="__next">
       <Head>
-        <meta name="facebook-domain-verification" content={process.env.NEXT_PUBLIC_META_TAG} />
+        <meta name="facebook-domain-verification" content="ynb94sa6pbk2f2tmtaaq73h3ks0u6f" />
       </Head>
       <Navbar {...settings} />
       <div>{children}</div>
