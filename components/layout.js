@@ -18,9 +18,6 @@ export default function Layout(props) {
       <Head>
         <link rel="preconnect" href="https://cdn.sanity.io/" />
         <link rel="dns-prefetch" href="https://cdn.sanity.io//" />
-        {process.env.NEXT_PUBLIC_META_TAG && (
-          <div dangerouslySetInnerHTML={{ __html: process.env.NEXT_PUBLIC_META_TAG }} />
-        )}
       </Head>
       <NextSeo
         title={props.title}

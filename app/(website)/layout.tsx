@@ -2,6 +2,7 @@ import { getSettings } from "@/lib/sanity/client";
 import Footer from "@/components/footer";
 import { urlForImage } from "@/lib/sanity/image";
 import Navbar from "@/components/navbar";
+import Head from "next/head";
 
 async function sharedMetaData(params) {
   const settings = await getSettings();
@@ -12,7 +13,7 @@ async function sharedMetaData(params) {
       template: "%s | Stablo"
     },
     description: settings?.description || "INOVTOUR cooperates with the best travel agencies in the world to provide you with the best travel experience.",
-    keywords: ["travel", "tourism", "vacation", "trip"],
+    keywords: ["travel", "tourism", "vacation", "trip111111"],
     authors: [{ name: "Govinda Systems DAO" }],
     canonical: settings?.url,
     openGraph: {
@@ -31,7 +32,13 @@ async function sharedMetaData(params) {
     robots: {
       index: true,
       follow: true
-    }
+    },
+    additionalMetaTags: [
+      {
+        name: "facebook-domain-verification",
+        content: process.env.NEXT_PUBLIC_META_TAG
+      }
+    ]
   };
 }
 
@@ -43,6 +50,9 @@ export default async function Layout({ children, params }) {
   const settings = await getSettings();
   return (
     <div id="__next">
+      <Head>
+        <meta name="facebook-domain-verification" content={process.env.NEXT_PUBLIC_META_TAG} />
+      </Head>
       <Navbar {...settings} />
       <div>{children}</div>
       <Footer {...settings} />
