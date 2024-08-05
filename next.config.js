@@ -12,8 +12,11 @@ const nextConfig = {
     ignoreBuildErrors: process.env.VERCEL_ENV === "production"
   },
   eslint: {
-    /// Set this to false if you want production builds to abort if there's lint errors
+    // Set this to false if you want production builds to abort if there's lint errors
     ignoreDuringBuilds: process.env.VERCEL_ENV === "production"
+  },
+  env: {
+    NEXT_PUBLIC_PIXEL_ID: process.env.NEXT_PUBLIC_PIXEL_ID,
   }
 };
 

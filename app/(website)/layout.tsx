@@ -33,17 +33,6 @@ async function sharedMetaData(params) {
       index: true,
       follow: true
     },
-    facebook: {
-      domain: {
-        verification: "ynb94sa6pbk2f2tmtaaq73h3ks0u6f"
-      }
-    },
-    additionalMetaTags: [
-      {
-        name: "facebook-domain-verification",
-        content: "ynb94sa6pbk2f2tmtaaq73h3ks0u6f"
-      }
-    ]
   };
 }
 
@@ -55,9 +44,6 @@ export default async function Layout({ children, params }) {
   const settings = await getSettings();
   return (
     <div id="__next">
-      <Head>
-        <meta name="facebook-domain-verification" content="ynb94sa6pbk2f2tmtaaq73h3ks0u6f" />
-      </Head>
       <Navbar {...settings} />
       <div>{children}</div>
       <Footer {...settings} />
