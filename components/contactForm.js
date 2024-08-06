@@ -6,6 +6,9 @@ import contactFormImg from "./img/contactForm.png";
 import FormFields from "./formFields";
 
 const ContactForm = () => {
+
+  
+
   return (
     <div id="contact-form" className="bg-gray-100 py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

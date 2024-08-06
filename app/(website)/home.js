@@ -13,6 +13,9 @@ import Testimonials from "@/components/testimonials";
 import ExclusiveServiceImg from "@/public/img/exclusive_service.png";
 
 export default function Home() {
+  useEffect(() => {
+    window.fbq('track', 'ViewContent', { page: 'HomePage' });
+  }, []);
 
   const segment = {
     imgSrc: ExclusiveServiceImg,
