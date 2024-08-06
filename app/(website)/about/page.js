@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import { getAllAuthors, getSettings } from "@/lib/sanity/client";
 import About from "./about";
 

@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import { getSettings } from "@/lib/sanity/client";
 import Contact from "./contact";
 
