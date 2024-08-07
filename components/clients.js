@@ -34,13 +34,6 @@ const Clients = () => {
     margin: '0.5rem',
   };
 
-  const headingStyle = {
-    fontSize: '3rem',
-    fontWeight: 'bold',
-    color: '#1a202c',
-    textAlign: 'center',
-  };
-
   const buttonStyle = {
     display: 'inline-block',
     fontWeight: 'bold',
@@ -57,7 +50,7 @@ const Clients = () => {
     <div style={containerStyle}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div>
-          <h2 style={headingStyle}>
+          <h2 className='text-[#1a202c] font-bold text-center md:text-5xl sm:text-4xl text-2xl'>
             Conheça nossos Clientes
           </h2>
         </div>

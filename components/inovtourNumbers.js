@@ -29,7 +29,7 @@ const InovtourNumbers = () => {
     <div className="bg-gray-100 py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-5xl font-medium text-gray-900">
+          <h2 className="md:text-5xl text-3xl font-medium text-gray-900">
             INOVTOUR em números
           </h2>
         </div>
