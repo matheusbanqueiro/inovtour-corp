@@ -26,7 +26,7 @@ const CallToAction = ({
           {title}
         </p>
         <Link href={buttonLink} passHref>
-          <button className="inline-block rounded bg-mainlight px-6 py-3 text-2xl font-bold text-white3 hover:bg-mainlight/90 md:text-3xl">
+          <button className="inline-block rounded bg-mainlight md:px-6 px-4 py-3 text-xl font-bold text-white3 hover:bg-mainlight/90 md:text-3xl">
             {buttonText}
           </button>
         </Link>
