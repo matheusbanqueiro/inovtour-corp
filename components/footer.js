@@ -24,12 +24,12 @@ export default function Footer(props) {
 
   return (
     <div className="bg-dark2 ">
-      <div className="mb-5 px-16 py-8 text-left">
+      <div className="px-16 py-8 text-left">
         <a href="#top" className="text-white hover:text-blue-600">
           Voltar ao topo <span className="text-blue-500">↑</span>
         </a>
       </div>
-      <div className="flex gap-16 px-16 text-sm text-gray-500  dark:text-gray-600">
+      <div className="flex flex-col gap-8 md:gap-16 px-16 text-sm text-gray-500 dark:text-gray-600 md:flex md:flex-row">
         <div className="w-64">
           <h3 className="text-center font-medium text-white">
             Receba promoções
@@ -117,7 +117,7 @@ export default function Footer(props) {
             </li>
           </ul>
         </div>
-        <div className="">
+        <div className="justify-center">
           <Image
             src={Logo}
             alt="LOGO INOVTOUR"
@@ -160,7 +160,7 @@ export default function Footer(props) {
               href="https://www.linkedin.com"
               target="_blank"
               rel="noopener noreferrer">
-               <Image
+              <Image
                 src={LinkedIn}
                 alt="LinkedIn"
                 width="28"

@@ -35,14 +35,14 @@ const PillarsSection = () => {
   return (
     <div className="bg-gray-100 py-12 text-center">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h3 className="mb-12 text-5xl font-medium text-black">
+        <h3 className="mb-12 md:text-5xl sm:text-4xl text-3xl font-medium text-black">
           Nossos pilares
         </h3>
-        <div className="flex justify-center gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 justify-center gap-10">
           {pillars.map((pillar, index) => (
             <div
               key={index}
-              className="flex flex-col items-center rounded-lg bg-white px-14 py-6 shadow-md">
+              className="flex flex-col items-center rounded-lg bg-white md:px-14 py-6 shadow-md">
               <Image
                 src={pillar.imageSrc}
                 alt={pillar.title}
@@ -51,7 +51,7 @@ const PillarsSection = () => {
                 className="mb-5"
               />
 
-              <div className="flex flex-col gap-5 text-left text-base text-dark1">
+              <div className="flex flex-col gap-5 text-left text-sm md:text-base text-dark1">
                 {pillar.description.map((desc, i) => (
                   <div key={i} className="flex w-48 gap-2">
                     <p className="flex items-center">

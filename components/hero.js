@@ -6,7 +6,7 @@ import HeroNew from "./img/hero-new.png";
 
 export default function Hero() {
   return (
-    <div className="relative w-full h-screen">
+    <div className="relative h-screen w-full">
       <Image
         src={HeroNew}
         alt="Hero Image"
@@ -15,14 +15,18 @@ export default function Hero() {
         quality={100}
         className="z-0"
       />
-      <div className="absolute inset-0 flex flex-col justify-center items-start p-10 gap-8">
-        <h1 className="text-dark1 text-5xl font-regular w-[556px]">
-        Sua empresa com atendimento de excelência em Gerenciamento de Viagens Corporativas
+      <div className="absolute inset-0 flex flex-col items-start justify-center gap-8 p-6 sm:p-8 md:p-10">
+        <h1 className="font-regular w-auto text-2xl text-dark1 sm:text-4xl md:w-[556px] md:text-5xl">
+          Sua empresa com atendimento de excelência em Gerenciamento
+          de Viagens Corporativas
         </h1>
-        <p className="text-dark2 text-lg w-1/2">
-        Consultoria e soluções em viagens e eventos corporativos nacionais e internacionais
+        <p className="text-sm text-dark2 sm:text-base md:w-1/2 md:text-lg">
+          Consultoria e soluções em viagens e eventos corporativos
+          nacionais e internacionais
         </p>
-        <Link href="/solutions" className="px-6 py-3 bg-main text-white text-lg rounded hover:bg-maindark/90">
+        <Link
+          href="/solutions"
+          className="rounded bg-main px-6 py-3 text-lg text-white hover:bg-maindark/90">
           Saiba mais
         </Link>
       </div>

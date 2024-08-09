@@ -15,15 +15,19 @@ const VisionMissionValuesSection = ({
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 flex flex-col items-start md:flex-row">
           <div className="h-[520px] overflow-hidden overflow-y-auto text-left md:w-1/2 md:pr-8">
-            <h3 className="mb-8 text-5xl font-medium text-dark1">
+            <h3 className="mb-8 text-3xl font-medium text-dark1 sm:text-4xl md:text-5xl">
               Visão
             </h3>
-            <p className="mb-8 text-dark2">{vision}</p>
-            <h3 className="mb-8 text-5xl font-medium text-dark1">
+            <p className="mb-8 text-sm text-dark2 md:text-base">
+              {vision}
+            </p>
+            <h3 className="mb-8 text-3xl font-medium text-dark1 sm:text-4xl md:text-5xl">
               Missão
             </h3>
-            <p className="mb-8 text-dark2">{mission}</p>
-            <h3 className="mb-8 text-5xl font-medium text-dark1">
+            <p className="mb-8 text-sm text-dark2 md:text-base">
+              {mission}
+            </p>
+            <h3 className="mb-8 text-3xl font-medium text-dark1 sm:text-4xl md:text-5xl">
               Valores
             </h3>
             <div className="flex flex-col gap-3">
@@ -36,7 +40,7 @@ const VisionMissionValuesSection = ({
                     height={24}
                     className=""
                   />
-                  <span className="text-gray-700">{value}</span>
+                  <span className="text-gray-700 text-sm md:text-base">{value}</span>
                 </li>
               ))}
             </div>
@@ -47,7 +51,7 @@ const VisionMissionValuesSection = ({
               alt="Vision and Mission"
               width={400}
               height={400}
-              className="object-contain"
+              className="object-contain sm:w-72 w-60 md:w-96"
             />
           </div>
         </div>

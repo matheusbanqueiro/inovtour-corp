@@ -6,10 +6,10 @@ const AboutSection = ({ title, subtitle }) => {
   return (
     <div className="py-12 text-center flex justify-center bg-white3">
       <div className="max-w-4xl">
-        <h2 className="text-6xl font-normal text-maindark">
+        <h2 className="md:text-6xl sm:text-4xl text-3xl font-normal text-maindark">
           {title}
         </h2>
-        <p className="mt-4 text-lg text-maindark">
+        <p className="mt-4 md:text-lg text-base text-maindark">
           {subtitle}
         </p>
       </div>
