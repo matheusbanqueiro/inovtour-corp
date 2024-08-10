@@ -123,9 +123,9 @@ export default function Footer(props) {
             alt="LOGO INOVTOUR"
             width="200"
             height="50"
-            className="mb-5"
+            className="mb-5 mx-auto"
           />
-          <div className="mt-2 flex flex-col">
+          <div className="mt-2 items-center md:items-start flex flex-col">
             <p className="text-xs text-grey3">
               INOVTOUR VIAGENS E TURISMO LTDA
             </p>
