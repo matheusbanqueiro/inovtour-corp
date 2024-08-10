@@ -5,7 +5,6 @@ import { urlForImage } from "@/lib/sanity/image";
 import Navbar from "@/components/navbar";
 import Script from 'next/script';
 
-// Função para gerar metadados de forma síncrona
 export async function generateMetadata(): Promise<Metadata> {
   const settings = await getSettings();
 
@@ -40,10 +39,9 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-// Layout principal do website
 export default async function Layout({ children }: { children: React.ReactNode }) {
-  const settingsPromise = getSettings(); // Obtém a promessa
-  const settings = await settingsPromise; // Resolve a promessa antes de usar
+  const settingsPromise = getSettings(); 
+  const settings = await settingsPromise; 
 
   return (
     <html lang="en">
@@ -67,7 +65,6 @@ export default async function Layout({ children }: { children: React.ReactNode }
           }}
         />
         <noscript>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             height="1"
             width="1"
@@ -79,9 +76,9 @@ export default async function Layout({ children }: { children: React.ReactNode }
       </head>
       <body>
         <div id="__next">
-          <Navbar {...settings} /> {/* Usando os dados resolvidos */}
+          <Navbar {...settings} /> 
           <div>{children}</div>
-          <Footer {...settings} /> {/* Usando os dados resolvidos */}
+          <Footer {...settings} /> 
         </div>
       </body>
     </html>
