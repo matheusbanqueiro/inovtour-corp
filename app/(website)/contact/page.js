@@ -24,6 +24,3 @@ export default function ContactPage() {
 
   return <Contact {...settings} />;
 }
-
-console.log('Revalidate Value:', revalidate);
-export const revalidate = 60;

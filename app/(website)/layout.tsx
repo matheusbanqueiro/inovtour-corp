@@ -1,9 +1,11 @@
+import { Metadata } from 'next';
 import { getSettings } from "@/lib/sanity/client";
 import Footer from "@/components/footer";
 import { urlForImage } from "@/lib/sanity/image";
 import Navbar from "@/components/navbar";
 
-async function sharedMetaData(params) {
+// Metadata é gerado de forma síncrona
+export async function generateMetadata(): Promise<Metadata> {
   const settings = await getSettings();
 
   return {
@@ -14,33 +16,34 @@ async function sharedMetaData(params) {
     description: settings?.description || "INOVTOUR cooperates with the best travel agencies in the world to provide you with the best travel experience.",
     keywords: ["travel", "tourism", "vacation", "trip"],
     authors: [{ name: "Govinda Systems DAO" }],
-    canonical: settings?.url,
+    alternates: {
+      canonical: settings?.url || "https://default-url.com", // Definindo a URL canônica
+      // Você pode adicionar outras URLs alternativas aqui, se necessário
+    },
     openGraph: {
       images: [
         {
           url: urlForImage(settings?.openGraphImage)?.src || "/img/opengraph.jpg",
           width: 800,
-          height: 600
+          height: 600,
         }
-      ]
+      ],
     },
     twitter: {
       title: settings?.title || "INOVTOUR",
-      card: "summary_large_image"
+      card: "summary_large_image",
     },
     robots: {
       index: true,
-      follow: true
+      follow: true,
     },
   };
 }
 
-export async function generateMetadata({ params }) {
-  return await sharedMetaData(params);
-}
+// Função Layout não deve ser async
+export default async function Layout({ children }: { children: React.ReactNode }) {
+  const settings = await getSettings(); // Resolva a Promise aqui
 
-export default async function Layout({ children, params }) {
-  const settings = await getSettings();
   return (
     <div id="__next">
       <Navbar {...settings} />
