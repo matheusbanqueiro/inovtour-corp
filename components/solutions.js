@@ -49,7 +49,7 @@ const Solutions = () => {
     <div className="bg-gray-100 py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
-          <h2 className="text-center text-5xl font-medium text-dark1 lg:text-3xl">
+          <h2 className="text-center sm:text-3xl text-2xl md:text-5xl font-medium text-dark1 lg:text-3xl">
             Explore nossas soluções
           </h2>
         </div>
@@ -68,16 +68,16 @@ const Solutions = () => {
                     height={100}
                   />
                 </div>
-                <h3 className="mb-2 text-center text-2xl font-semibold">
+                <h3 className="mb-2 text-center md:text-2xl sm:text-1xl text-xl font-semibold">
                   {solution.title}
                 </h3>
-                <p className="mb-4 w-52 text-base text-left text-gray-600">
+                <p className="mb-4 md:w-52 md:text-base sm:text-sm text-left text-gray-600">
                   {solution.description}
                 </p>
                 <a
                   href={solution.link}
                   onClick={(e) => handleScrollToForm(e, solution.link)}
-                  className="flex items-center gap- rounded bg-main px-4 py-2 text-sm font-semibold text-white hover:bg-main/90">
+                  className="flex items-center gap-2 rounded bg-main px-4 py-2 text-sm font-semibold text-white hover:bg-main/90">
                   {solution.button}
                   <Image
                     src={arrowRight}

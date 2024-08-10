@@ -22,9 +22,11 @@ const CallToAction = ({
         className="absolute inset-0 z-0 rounded-xl"
       />
       <div className="relative z-10 flex h-full flex-col items-center justify-center gap-6 rounded-xl bg-black/40">
-        <p className="text-xl text-white3">{title}</p>
+        <p className="text-center text-base text-white3 sm:text-lg md:text-xl">
+          {title}
+        </p>
         <Link href={buttonLink} passHref>
-          <button className="inline-block rounded bg-mainlight px-6 py-3 text-3xl font-bold text-white3 hover:bg-mainlight/90">
+          <button className="inline-block rounded bg-mainlight md:px-6 px-4 py-3 text-xl font-bold text-white3 hover:bg-mainlight/90 md:text-3xl">
             {buttonText}
           </button>
         </Link>

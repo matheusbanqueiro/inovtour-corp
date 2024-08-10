@@ -46,7 +46,7 @@ export default function Footer({
           Voltar ao topo <span className="text-blue-500">↑</span>
         </a>
       </div>
-      <div className="flex gap-16 px-16 text-sm text-gray-500 dark:text-gray-600">
+      <div className="flex flex-col gap-8 md:gap-16 px-16 text-sm text-gray-500 dark:text-gray-600 md:flex md:flex-row">
         <div className="w-64">
           <h3 className="text-center font-medium text-white">Receba promoções</h3>
           <form onSubmit={handleSubmit}>
@@ -89,11 +89,15 @@ export default function Footer({
             alt={logo?.alt || "LOGO INOVTOUR"}
             width="200"
             height="50"
-            className="mb-5"
+            className="mb-5 mx-auto"
           />
-          <div className="mt-2 flex flex-col">
-            <p className="text-xs text-grey3">INOVTOUR VIAGENS E TURISMO LTDA</p>
-            <p className="text-xs text-grey3">CNPJ: 12.207.821/0001-82</p>
+          <div className="mt-2 items-center md:items-start flex flex-col">
+            <p className="text-xs text-grey3">
+              INOVTOUR VIAGENS E TURISMO LTDA
+            </p>
+            <p className="text-xs text-grey3">
+              CNPJ: 12.207.821/0001-82
+            </p>
           </div>
           <div className="mt-16 flex justify-around">
             <a
@@ -123,8 +127,7 @@ export default function Footer({
             <a
               href={linkedinURL}
               target="_blank"
-              rel="noopener noreferrer"
-            >
+              rel="noopener noreferrer">
               <Image
                 src={LinkedIn}
                 alt="LinkedIn"

@@ -159,7 +159,7 @@ export default function Solutions() {
         title={bannerTitle}
         subtitle={bannerSubtitle}
       />
-      <h1 className="mt-36 text-center text-4xl font-bold text-maindark">
+      <h1 className="md:mt-36 sm:mt-16 mt-8 text-center sm:text-3xl text-2xl md:text-4xl font-bold text-maindark">
       Saiba mais sobre as soluções que a INOVTOUR desenvolve para a construção de melhores resultados
       </h1>
       <div>
@@ -222,7 +222,7 @@ export default function Solutions() {
           </React.Fragment>
         ))}
       </div>
-      <h1 className="mb-4 mt-36 text-center text-4xl font-bold text-maindark">
+      <h1 className="mb-4 md:mt-36 mt-8 text-center md:text-4xl text-2xl font-bold text-maindark">
         Confira alguns serviços com preço exclusivo
       </h1>
       {/* <div className="mb-8 mt-8 flex flex-col gap-3 bg-maindark py-8">

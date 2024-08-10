@@ -44,15 +44,15 @@ export default function Contact({
           width={200}
           height={200}
           alt={""}
-          className="w-full"
+          className="w-full md:flex hidden"
         />
       </div>
-      <div className="absolute top-20 flex w-full flex-col items-center md:flex-row">
+      <div className="md:absolute md:top-20 flex w-full flex-col items-center md:flex-row">
         <div className="mx-auto rounded-lg bg-white p-6 md:w-1/2">
-          <h3 className="mb-4 text-center text-3xl font-semibold text-gray-900">
+          <h3 className="mb-4 text-center text-2xl md:text-3xl font-semibold text-gray-900">
             Fale com a INOVTOUR
           </h3>
-          <p className="mb-4 text-center text-sm text-gray-700">
+          <p className="mb-4 text-center text-xs md:text-sm text-gray-700">
             Preencha as informações e nossos especialistas irão entrar
             em contato com você.
           </p>
@@ -60,7 +60,7 @@ export default function Contact({
         </div>
       </div>
       <Container>
-        <div className="flex justify-between py-14">
+        <div className="flex md:flex-row flex-col justify-between py-14 md:gap-0 gap-8">
           <div className="flex flex-col gap-5 text-left">
             <p className="text-3xl font-medium">
               Caso prefira entrar em contato
@@ -79,7 +79,7 @@ export default function Contact({
           </div>
           <div className="flex flex-col gap-5 text-left">
             <p className="text-3xl font-medium">Nossa localização</p>
-            <div className="flex items-start gap-2">
+            <div className="flex items-center md:items-start gap-2">
               <Image
                 src={MapPin}
                 width={28}
