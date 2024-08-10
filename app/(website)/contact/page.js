@@ -1,17 +1,29 @@
 "use client";
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { getSettings } from "@/lib/sanity/client";
 import Contact from "./contact";
 
-export default async function ContactPage() {
-  const settings = await getSettings();
-  
+export default function ContactPage() {
+  const [settings, setSettings] = useState(null);
+
   useEffect(() => {
+    const fetchSettings = async () => {
+      const settingsData = await getSettings();
+      setSettings(settingsData);
+    };
+
+    fetchSettings();
+
     window.fbq('track', 'ViewContent', { page: 'ContactPage' });
   }, []);
 
-  return <Contact {...settings}/>;
+  if (!settings) {
+    return <div>Loading...</div>; // Ou qualquer outro estado de carregamento
+  }
+
+  return <Contact {...settings} />;
 }
 
+console.log('Revalidate Value:', revalidate);
 export const revalidate = 60;

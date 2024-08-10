@@ -17,7 +17,11 @@ const nextConfig = {
   },
   env: {
     NEXT_PUBLIC_PIXEL_ID: process.env.NEXT_PUBLIC_PIXEL_ID,
-  }
+  },
+  webpack: (config, { isServer }) => {
+    // Nenhuma configuração adicional necessária aqui
+    return config;
+  },
 };
 
 module.exports = nextConfig;

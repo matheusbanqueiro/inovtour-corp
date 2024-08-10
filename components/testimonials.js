@@ -46,7 +46,7 @@ const Testimonials = () => {
               className="flex flex-col justify-center rounded-lg bg-white p-5 shadow-lg">
               <div className="items-center flex justify-center">
                 <p className="mb-4 w-64 text-center italic text-gray-600">
-                  "{testimonial.quote}"
+                  {testimonial.quote}
                 </p>
               </div>
 
