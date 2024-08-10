@@ -58,6 +58,9 @@ const FormFields = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (validateForm()) {
+
+      window.fbq('track', 'Contact', { method: 'form' });
+
       try {
         const response = await fetch(API_URL, {
           method: "POST",

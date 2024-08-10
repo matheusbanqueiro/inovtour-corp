@@ -1,4 +1,5 @@
 "use client";
+
 import Container from "@/components/container";
 import Banner from "@/components/banner";
 import InfoSegment from "@/components/infoSegment";

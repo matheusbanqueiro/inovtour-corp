@@ -1,3 +1,6 @@
+"use client";
+
+import React, { useEffect } from 'react';
 import Link from "next/link";
 import Container from "@/components/container";
 import PostList from "@/components/postlist";
@@ -13,6 +16,9 @@ import Testimonials from "@/components/testimonials";
 import ExclusiveServiceImg from "@/public/img/exclusive_service.png";
 
 export default function Home() {
+  useEffect(() => {
+    window.fbq('track', 'ViewContent', { page: 'HomePage' });
+  }, []);
 
   const segment = {
     imgSrc: ExclusiveServiceImg,
