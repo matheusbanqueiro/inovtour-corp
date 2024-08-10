@@ -60,7 +60,6 @@ export default async function Layout({ children }: { children: React.ReactNode }
               s.parentNode.insertBefore(t,s)}(window,document,'script',
               'https://connect.facebook.net/en_US/fbevents.js');
               fbq('init', '${process.env.NEXT_PUBLIC_PIXEL_ID}');
-              fbq('track', 'PageView');
             `,
           }}
         />
@@ -69,7 +68,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
             height="1"
             width="1"
             style={{ display: 'none' }}
-            src={`https://www.facebook.com/tr?id=${process.env.NEXT_PUBLIC_PIXEL_ID}&ev=PageView&noscript=1`}
+            src={`https://www.facebook.com/tr?id=${process.env.NEXT_PUBLIC_PIXEL_ID}&noscript=1`}
             alt="Facebook Pixel"
           />
         </noscript>
