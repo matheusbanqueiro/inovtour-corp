@@ -31,7 +31,7 @@ async function sharedMetaData(params) {
     robots: {
       index: true,
       follow: true
-    }
+    },
   };
 }
 
@@ -49,3 +49,5 @@ export default async function Layout({ children, params }) {
     </div>
   );
 }
+
+export const revalidate = 60;

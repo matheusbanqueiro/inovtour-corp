@@ -9,11 +9,22 @@ import MessageCircle from "@/components/icons/message-circle.svg";
 import Email from "@/components/icons/mail.svg";
 import FormFields from "@/components/formFields"; // Import FormFields
 
-export default function Contact() {
+export default function Contact({
+  title,
+  description,
+  email,
+  phone,
+  social,
+  copyright,
+  logo,
+  logoalt,
+}) {
+
+
   const contact = [
     {
       icon: Phone,
-      title: "Tel.: (11) 5524-9700"
+      title: phone
     },
     {
       icon: Email,
