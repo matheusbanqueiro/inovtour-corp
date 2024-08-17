@@ -133,6 +133,12 @@ npm run sanity
 npx vercel --prod
 ```
 
+## Run tests
+brew install act
+
+yarn test:e2e
+
+
 ## Uso
 
 ### Funcionalidades

@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-08-17T21:13:11.866Z",
+    "end": "2024-08-17T21:13:12.352Z",
+    "duration": 486,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e2179187-ccd6-4741-a503-5166121648f3",
+      "title": "",
+      "fullFile": "cypress/e2e/home.cy.js",
+      "file": "cypress/e2e/home.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f7143b96-a8c0-4984-a548-af9bd116f8fb",
+          "title": "Página Inicial",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "deve carregar a página inicial com sucesso",
+              "fullTitle": "Página Inicial deve carregar a página inicial com sucesso",
+              "timedOut": null,
+              "duration": 409,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// Visite a página inicial\ncy.visit('/');\n// Verifique se o título da página contém o nome da empresa\ncy.title().should('include', 'INOVTOUR');\n// Verifique se o cabeçalho principal contém o texto esperado\ncy.get('h1').should('contain.text', 'Sua empresa com atendimento de excelência em Gerenciamento de Viagens Corporativas');\n// Verifique se o botão \"Saiba mais\" está visível e clicável\ncy.get('a').contains('Saiba mais').should('be.visible').click();\n// Verifique se a navegação ocorreu corretamente após o clique\ncy.url().should('include', '/destino-do-link');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\n/\n\nWe failed looking for this file at the path:\n\n/Users/gosouza/projetos-p/inovtour-corp/\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\n/\n\nWe failed looking for this file at the path:\n\n/Users/gosouza/projetos-p/inovtour-corp/\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found\n    at <unknown> (http://localhost:59325/__cypress/runner/cypress_runner.js:131898:76)\n    at visitFailedByErr (http://localhost:59325/__cypress/runner/cypress_runner.js:131313:12)\n    at <unknown> (http://localhost:59325/__cypress/runner/cypress_runner.js:131881:13)\n    at tryCatcher (http://localhost:59325/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://localhost:59325/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://localhost:59325/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (http://localhost:59325/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (http://localhost:59325/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (http://localhost:59325/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (http://localhost:59325/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (http://localhost:59325/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (http://localhost:59325/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://stablo-free/./cypress/e2e/home.cy.js:4:9)",
+                "diff": null
+              },
+              "uuid": "dc7108ec-b9cc-4f5e-8faf-ae08971d8894",
+              "parentUUID": "f7143b96-a8c0-4984-a548-af9bd116f8fb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "dc7108ec-b9cc-4f5e-8faf-ae08971d8894"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 409,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
