@@ -1,6 +1,3 @@
-### Atualização do README em Português
-
-```markdown
 <p align="center">
 <img src="https://raw.githubusercontent.com/govinda777/inovtour-corp/main/public/img/logo.png" height="150">
 </p>
@@ -48,6 +45,7 @@ Experimente as pré-visualizações do editor ao vivo das próximas versões: <a
 
 - [Sobre](#sobre)
 - [Setup](#setup)
+- [Run tests](#run-tests)
 - [Uso](#uso)
 - [Contribuindo](#contribuindo)
 - [Licença](#licença)
@@ -134,10 +132,32 @@ npx vercel --prod
 ```
 
 ## Run tests
+
+### Localmente
+
+1. Instale o Act para simular a pipeline do GitHub Actions localmente:
+
+```bash
 brew install act
+```
 
+2. Execute os testes E2E:
+
+```bash
 yarn test:e2e
+```
 
+### Pipeline CI
+
+A pipeline CI utiliza GitHub Actions para construir e executar testes E2E automaticamente em cada push para a branch `main` ou ao abrir um pull request.
+
+### Comando para rodar a pipeline localmente
+
+Caso deseje rodar a pipeline localmente com Act:
+
+```bash
+yarn act
+```
 
 ## Uso
 
@@ -180,10 +200,10 @@ Os arquivos de configuração são essenciais para definir o comportamento e a i
 - [Documentação](https://inovtour-corp.docs)
 - [Figma Site](https://www.figma.com/design/pjuPkngqXmwDqPl5W3UU1y/Inovtour?node-id=94-434&t=gm8OsOSOTa1JeJKn-1)
 - [Figma Estudo](https://www.figma.com/file/eQNyCKBenlZYG1sXA03t5n/Inovtour---desk-research?type=whiteboard&node-id=0%3A1&t=HJ4fZZLiCpHuahNk-1)
-- [Blue Ocean](https://docs.google.com/spreadsheets/d/1IE6fQinP2gdQYV3Ib0WicAfLGkd9JVj7Hq_TwJNW3BM/edit?usp=sharing)
-- [Miro](https://miro.com/app/board/uXjVK
+- [Blue Ocean](https://docs.google.com/spreadsheets/d/1IE6fQinP2gdQYV3Ib0WicAfLGkd9JVj7Hq_TwJNW3BM/edit?
 
-RVfwCk=/)
+usp=sharing)
+- [Miro](https://miro.com/app/board/uXjVKRVfwCk=/)
 
 ## Contribuindo
 

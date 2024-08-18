@@ -3034,6 +3034,13 @@ acorn@^8.9.0:
   resolved "https://registry.npmjs.org/acorn/-/acorn-8.12.1.tgz"
   integrity sha512-tcpGyI9zbizT9JbV6oYE477V6mTlXvvi0T0G3SNIYE2apm/G5huBa1+K89VGeovbg+jycCrfhl3ADxErOuO6Jg==
 
+act@^0.2.24:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/act/-/act-0.0.6.tgz#46741ffcf71bde88a01aaa5809cb99860036fd3e"
+  integrity sha512-ZtxoGxWmoq6bF1lGASkepxfeLED9TNVt8cQjEMFNUlaVxXMr/XfpO7iAKF3ElBgVquxyntne4u4iBqg12sSBiA==
+  dependencies:
+    underscore "~1.3.3"
+
 agent-base@^7.0.2, agent-base@^7.1.0:
   version "7.1.1"
   resolved "https://registry.npmjs.org/agent-base/-/agent-base-7.1.1.tgz"
@@ -9291,6 +9298,11 @@ unbzip2-stream@^1.0.9:
   dependencies:
     buffer "^5.2.1"
     through "^2.3.8"
+
+underscore@~1.3.3:
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.3.3.tgz#47ac53683daf832bfa952e1774417da47817ae42"
+  integrity sha512-ddgUaY7xyrznJ0tbSUZgvNdv5qbiF6XcUBTrHgdCOVUrxJYWozD5KyiRjtIwds1reZ7O1iPLv5rIyqnVAcS6gg==
 
 undici-types@~6.13.0:
   version "6.13.0"

@@ -11,7 +11,8 @@
     "sanity-import": "sanity dataset import lib/sanity/data/production.tar.gz production",
     "sanity-export": "sanity dataset export production lib/sanity/data/production.tar.gz",
     "lint": "next lint",
-    "test:e2e": "wait-on http://localhost:3000 && cypress run"
+    "test:e2e": "cypress run",
+    "act": "act -j build-and-test"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
@@ -59,6 +60,7 @@
     "prettier-plugin-tailwindcss": "^0.5.11",
     "sharp": "^0.33.4",
     "tailwindcss": "^3.4.1",
-    "wait-on": "^7.2.0"
+    "wait-on": "^7.2.0",
+    "act": "^0.0.6"
   }
 }

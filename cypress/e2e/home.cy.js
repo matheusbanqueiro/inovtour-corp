@@ -1,7 +1,10 @@
 describe('Página Inicial', () => {
     it('deve carregar a página inicial com sucesso', () => {
-      // Visite a página inicial
-      cy.visit('/');
+      // Aguarde 2 segundos antes de visitar a página
+      cy.wait(2000);
+
+      // Visite a página inicial com a URL completa
+      cy.visit('http://localhost:3000/');
   
       // Verifique se o título da página contém o nome da empresa
       cy.title().should('include', 'INOVTOUR');
@@ -15,5 +18,4 @@ describe('Página Inicial', () => {
       // Verifique se a navegação ocorreu corretamente após o clique
       cy.url().should('include', '/destino-do-link');
     });
-  });
-  
+});
