@@ -78,8 +78,10 @@ export default function Footer({
         <div className="flex flex-col gap-3">
           <h3 className="text-base font-semibold text-white">Localização</h3>
           <p className="w-[196px] text-left text-xs text-grey3">
-            AV. Dr. Chucri Zaidan, S/N - Bloco B Andar 24 - Vila São Francisco
-            Zona Sul, São Paulo / SP CEP: 04711-130
+            Av. Dr. Chucri Zaidan, S/N - Bloco B, 24º Andar
+            Chácara Santo Antônio, São Paulo-SP
+            Edifício EZ Towers
+            CEP: 04711-130
           </p>
         </div>
         <FooterContact phone={phone} email={email} />
