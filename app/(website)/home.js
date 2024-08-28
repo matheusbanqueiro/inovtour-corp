@@ -14,6 +14,7 @@ import Clients from "@/components/clients";
 import ContactForm from "@/components/contactForm";
 import Testimonials from "@/components/testimonials";
 import ExclusiveServiceImg from "@/public/img/exclusive_service.png";
+import EventTracker from "@/components/eventTracker";
 
 export default function Home() {
   useEffect(() => {
@@ -33,6 +34,7 @@ export default function Home() {
 
   return (
     <>
+      <EventTracker eventName="pageView" eventParams={{ page: 'HomePage' }} />
       <Hero />
       <Solutions />
       <TravelManagement />
