@@ -42,10 +42,13 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function Layout({ children }: { children: React.ReactNode }) {
   const settingsPromise = getSettings(); 
   const settings = await settingsPromise; 
+  const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
+  const pixelId = process.env.NEXT_PUBLIC_PIXEL_ID;
 
   return (
     <html lang="en">
       <head>
+        {/* Facebook Pixel */}
         <Script
           id="fb-pixel"
           strategy="afterInteractive"
@@ -59,7 +62,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
               t.src=v;s=b.getElementsByTagName(e)[0];
               s.parentNode.insertBefore(t,s)}(window,document,'script',
               'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', '${process.env.NEXT_PUBLIC_PIXEL_ID}');
+              fbq('init', '${pixelId}');
             `,
           }}
         />
@@ -68,12 +71,36 @@ export default async function Layout({ children }: { children: React.ReactNode }
             height="1"
             width="1"
             style={{ display: 'none' }}
-            src={`https://www.facebook.com/tr?id=${process.env.NEXT_PUBLIC_PIXEL_ID}&noscript=1`}
+            src={`https://www.facebook.com/tr?id=${pixelId}&noscript=1`}
             alt="Facebook Pixel"
           />
         </noscript>
+
+        {/* Google Tag Manager */}
+        <Script
+          id="gtm"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','${gtmId}');
+            `,
+          }}
+        />
       </head>
       <body>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          ></iframe>
+        </noscript>
         <div id="__next">
           <Navbar {...settings} /> 
           <div>{children}</div>
