@@ -5,7 +5,7 @@ import { urlForImage } from "@/lib/sanity/image";
 import Navbar from "@/components/navbar";
 import Head from 'next/head';
 import React from 'react';
-import ClientWrapper from "@/components/clientWrapper";
+import ClientLayout from "@/components/clientLayout";
 
 export async function generateMetadata(): Promise<Metadata> {
   const settings = await getSettings();
@@ -56,9 +56,9 @@ export default async function Layout({ children }: { children: React.ReactNode }
       <body>
         <div id="__next">
           <Navbar {...settings} /> 
-          <ClientWrapper gtmId={gtmId} pixelId={pixelId} settings={settings}>
+          <ClientLayout gtmId={gtmId} pixelId={pixelId} settings={settings}>
             {children}
-          </ClientWrapper>
+          </ClientLayout>
           <Footer {...settings} /> 
         </div>
       </body>
