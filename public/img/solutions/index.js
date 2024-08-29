@@ -5,7 +5,7 @@ export { default as SolutionsBannerImg } from './solutions_banner.png';
 export { default as SolutionsAccommodationImg } from './solutions_accommodation.png';
 export { default as SolutionsCarRentalImg } from './solutions_car_rental.jpg';
 export { default as SolutionsCorporateEventsImg } from './solutions_corporate_events.png';
-export { default as SolutionsPromotionPackagesImg } from './solutions_promotional_packages.png';
+export { default as SolutionsPromotionPackagesImg } from './solutions_promotional_packages.jpg';
 export { default as SolutionsCallToActionImg } from './solutions_call_to_action.png';
 export { default as SolutionsWatermark1Img } from './solutions_watermark_1.png';
 export { default as SolutionsWatermark2Img } from './solutions_watermark_2.png';

@@ -17,17 +17,13 @@ import ExclusiveServiceImg from "@/public/img/exclusive_service.png";
 import EventTracker from "@/components/eventTracker";
 
 export default function Home() {
-  useEffect(() => {
-    window.fbq('track', 'ViewContent', { page: 'HomePage' });
-  }, []);
-
   const segment = {
     imgSrc: ExclusiveServiceImg,
-    imgAlt: "Atendimento Exclusivo e Personalizado",
+    imgAlt: "Atendimento Exclusivo, Personalizado, Digital e On-Line",
     isImgRight: false,
-    title: "Atendimento Exclusivo e Personalizado",
-    mainParagraph: "Na INOVTOUR, oferecemos atendimento exclusivo e personalizado para todas as suas necessidades de viagens corporativas. Nossa equipe dedicada está disponível 24/7, garantindo soluções rápidas e eficientes.",
-    secondaryParagraph: "Adaptamos nossos serviços para proporcionar a melhor experiência, com foco em qualidade e satisfação.",
+    title: "Atendimento Exclusivo, Personalizado, Digital e On-Line",
+    mainParagraph: "Na INOVTOUR, oferecemos atendimento exclusivo, personalizado, digital e on-line para todas as suas necessidades de Viagens Corporativas.",
+    secondaryParagraph: "Nossa equipe dedicada está disponível 7/24hs, para garantir a melhor experiência, através de soluções ágeis, eficientes e de qualidade personalizada, oferecemos também toda a estrutura de atendimento digital e on-line.",
     buttonText: "Saiba mais",
     buttonLink: "/solutions"
   };

@@ -8,15 +8,15 @@ import arrowRight from "@/components/icons/arrow-right.svg";
 
 const InfoSegment = ({ imgSrc, imgAlt, isImgRight = false, title, mainParagraph, secondaryParagraph, buttonText, buttonLink }) => {
   return (
-    <div className="py-12 ">
+    <div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-medium text-gray-900">
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-medium text-gray-900">
             {title}
-          </h2>
+          </h3>
         </div>
 
-        <div className={`mt-10 flex flex-col ${isImgRight ? 'md:flex-row-reverse' : 'md:flex-row'} items-center`}>
+        <div className={`mt-4 flex flex-col ${isImgRight ? 'md:flex-row-reverse' : 'md:flex-row'} items-center`}>
           <div className="md:w-1/2">
             <Image
               src={imgSrc}
@@ -26,7 +26,7 @@ const InfoSegment = ({ imgSrc, imgAlt, isImgRight = false, title, mainParagraph,
               className="rounded-lg"
             />
           </div>
-          <div className="mt-6 md:mt-0 md:w-1/2 md:pl-10">
+          <div className="mt-4 md:mt-0 md:w-1/2 md:pl-8">
             <p className="text-gray-700 mb-4">
               {mainParagraph}
             </p>
@@ -34,14 +34,14 @@ const InfoSegment = ({ imgSrc, imgAlt, isImgRight = false, title, mainParagraph,
               {secondaryParagraph}
             </p>
             <Link href={buttonLink} passHref>
-              <button className=" flex bg-main items-center gap-2 text-white px-6 py-3 rounded hover:bg-main/90">
+              <button className="flex bg-main items-center gap-2 text-white px-6 py-3 rounded hover:bg-main/90">
                 {buttonText}
                 <Image
-                    src={arrowRight}
-                    alt="arrow"
-                    width={18}
-                    height={18}
-                  />
+                  src={arrowRight}
+                  alt="arrow"
+                  width={18}
+                  height={18}
+                />
               </button>
             </Link>
           </div>

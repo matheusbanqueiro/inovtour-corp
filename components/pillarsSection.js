@@ -11,20 +11,20 @@ const PillarsSection = () => {
         "Solidez",
         "Eficiência",
         "Rapidez",
-        "Alto desempenho de Resultados"
+        "Alto desempenho"
       ],
       imageSrc: Pillars1Img
     },
     {
       description: [
-        "Conhecimento e Soluções Práticas ",
+        "Soluções Práticas ",
         "Foco em cada Cliente"
       ],
       imageSrc: Pillars2Img
     },
     {
       description: [
-        "Construir um Relacionamento de Confiança ",
+        "Relacionamento de Confiança",
         "Integridade",
         "Sucesso"
       ],

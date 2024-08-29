@@ -6,9 +6,9 @@ import VisionMissionValuesImg from "@/public/img/vision_mission_values_section.p
 
 export default function About() {
   const aboutTitle =
-    "INOVTOUR há 14 anos fazendo história na gestão de viagens corporativas por todo mundo";
+    "A INOVTOUR é formada por Consultores de Viagens altamente experientes e capacitados em desenvolver soluções eficientes que agregam valor.";
   const aboutSubtitle =
-    "Contando com profissionais experientes e capacitados, comprometidos em desenvolver os melhores resultados.";
+    "Nossas soluções são direcionadas em proporcionar a melhor experiência em Gestão de Viagens, assim assegurar e garantir melhores resultados.";
 
   const vision =
     "Por entendermos que cada cliente é único e exclusivo, nosso principal compromisso é disponibilizar um serviço de atendimento aos clientes, dentro do mais alto padrão de qualidade, garantindo que todas as suas necessidades sejam atendidas com eficiência, através de soluções práticas e seguras.";
