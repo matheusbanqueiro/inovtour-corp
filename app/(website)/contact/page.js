@@ -14,8 +14,6 @@ export default function ContactPage() {
     };
 
     fetchSettings();
-
-    window.fbq('track', 'ViewContent', { page: 'ContactPage' });
   }, []);
 
   if (!settings) {

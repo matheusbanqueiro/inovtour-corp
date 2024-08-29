@@ -3,6 +3,7 @@ import AboutSection from "@/components/aboutSection";
 import PillarsSection from "@/components/pillarsSection";
 import VisionMissionValuesSection from "@/components/visionMissionValuesSection";
 import VisionMissionValuesImg from "@/public/img/vision_mission_values_section.png";
+import EventTracker from "@/components/eventTracker";
 
 export default function About() {
   const aboutTitle =
@@ -26,6 +27,7 @@ export default function About() {
 
   return (
     <>
+      <EventTracker eventName="pageView" eventParams={{ page: 'AboutPage' }} />
       <AboutSection title={aboutTitle} subtitle={aboutSubtitle} />
       <PillarsSection />
       <div className="bg-white3">

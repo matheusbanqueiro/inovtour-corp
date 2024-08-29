@@ -20,6 +20,7 @@ import {
   SolutionsBannerImg3,
   SolutionsWatermark3Img
 } from "@/public/img/solutions";
+import EventTracker from "@/components/eventTracker";
 
 export default function Solutions() {
   const bannerSlides = [
@@ -106,6 +107,7 @@ export default function Solutions() {
 
   return (
     <>
+      <EventTracker eventName="pageView" eventParams={{ page: 'SolutionsPage' }} />
       <Banner slides={bannerSlides} />
       <h1 className="md:mt-16 sm:mt-8 mt-4 text-center sm:text-3xl text-2xl md:text-4xl font-bold text-maindark mb-12">
         Saiba mais sobre as soluções que a INOVTOUR desenvolve para a construção de melhores resultados

@@ -7,7 +7,8 @@ import Phone from "@/components/icons/phone.svg";
 import MapPin from "@/components/icons/map-pin.svg";
 import MessageCircle from "@/components/icons/message-circle.svg";
 import Email from "@/components/icons/mail.svg";
-import FormFields from "@/components/formFields"; // Import FormFields
+import FormFields from "@/components/formFields";
+import EventTracker from "@/components/eventTracker";
 
 export default function Contact({
   title,
@@ -19,7 +20,6 @@ export default function Contact({
   logo,
   logoalt,
 }) {
-
 
   const contact = [
     {
@@ -38,6 +38,7 @@ export default function Contact({
 
   return (
     <>
+      <EventTracker eventName="pageView" eventParams={{ page: 'ContactPage' }} />
       <div className="">
         <Image
           src={Unsplash}
@@ -88,14 +89,10 @@ export default function Contact({
                 className=""
               />
               <p className="w-96 text-lg text-dark2">
-                Endereço: Av. Dr. Chucri Zaidan, S/N - Bloco B, 24º Andar - 
-                <br />
-                Vila São Francisco (Zona Sul), 
-                <br />
-                São Paulo, SP
-                <br />
-                CEP: 04711-130
-                <br />
+                Endereço: Av. Dr. Chucri Zaidan, S/N - Bloco B, 24º Andar<br />
+                Chácara Santo Antônio, São Paulo-SP<br />
+                Edifício EZ Towers<br />
+                CEP: 04711-130<br />
               </p>
             </div>
           </div>
