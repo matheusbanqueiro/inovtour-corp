@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import EventTracker from "@/components/eventTracker";
 import { DealPayload } from "../app/api/cuboCrm/model";
 
-const API_URL = '/api/cuboCrm';
+const API_URL = "/api/cuboCrm";
 
 const initialFormData = {
   subject: "",
@@ -27,12 +28,14 @@ const FormFields = () => {
   const [contactPreference, setContactPreference] = useState("");
   const [formData, setFormData] = useState(initialFormData);
   const [errors, setErrors] = useState(initialErrors);
+  const [eventTriggered, setEventTriggered] = useState(false);
+  const [trackingParams, setTrackingParams] = useState({});
 
   const handleChangeContactPreference = (value) => {
     setContactPreference(value);
     setFormData({
       ...formData,
-      contactPreference: value
+      contactPreference: value,
     });
   };
 
@@ -40,7 +43,7 @@ const FormFields = () => {
     const { name, value, type, checked } = e.target;
     setFormData({
       ...formData,
-      [name]: type === "checkbox" ? checked : value
+      [name]: type === "checkbox" ? checked : value,
     });
   };
 
@@ -52,25 +55,33 @@ const FormFields = () => {
       consent: !formData.consent,
     };
     setErrors(newErrors);
-    return !Object.values(newErrors).some(error => error);
+    return !Object.values(newErrors).some((error) => error);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (validateForm()) {
-
-      window.fbq('track', 'Contact', { method: 'form' });
-
+      // Enviar o formulário
       try {
         const response = await fetch(API_URL, {
           method: "POST",
           headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
           },
-          body: JSON.stringify(formData)
+          body: JSON.stringify(formData),
         });
         if (response.ok) {
           toast.success("Contato enviado com sucesso!");
+
+          // Rastrear o evento após o envio bem-sucedido
+          setTrackingParams({
+            subject: formData.subject,
+            organization: formData.organization,
+            peopleName: formData.peopleName,
+            contactPreference: formData.contactPreference,
+          });
+          setEventTriggered(true); // Dispara o rastreamento do evento
+
           setFormData(initialFormData); // Limpa o formulário após o envio bem-sucedido
         } else {
           toast.error("Erro ao enviar o contato. Tente novamente.");
@@ -85,6 +96,14 @@ const FormFields = () => {
 
   return (
     <>
+      {/* Renderizar EventTracker quando o evento for disparado */}
+      {eventTriggered && (
+        <EventTracker
+          eventName="ContactFormSubmit"
+          eventParams={trackingParams} // Passa os dados de rastreamento
+        />
+      )}
+
       <form className="" onSubmit={handleSubmit}>
         <div className="flex flex-col items-center justify-center gap-6">
           <div className="">
@@ -97,14 +116,23 @@ const FormFields = () => {
               <option value="" disabled>
                 Assunto
               </option>
-              <option value="1 - Preciso de suporte, orçamento ou informações sobre uma VIAGEM A TRABALHO">1 - Preciso de suporte, orçamento ou informações sobre uma VIAGEM A TRABALHO</option>
-              <option value="2 - Quero informações sobre PRODUTOS/FERRAMENTAS da INOVTOUR">2 - Quero informações sobre PRODUTOS/FERRAMENTAS da INOVTOUR</option>
-              <option value="3 - Preciso de suporte, orçamento ou informações para um EVENTO CORPORATIVO">3 - Preciso de suporte, orçamento ou informações para um EVENTO CORPORATIVO</option>
-              <option value="4 - Preciso de suporte, orçamento ou informações para uma VIAGEM DE INCENTIVO">4 - Preciso de suporte, orçamento ou informações para uma VIAGEM DE INCENTIVO</option>
+              <option value="1 - Preciso de suporte, orçamento ou informações sobre uma VIAGEM A TRABALHO">
+                1 - Preciso de suporte, orçamento ou informações sobre uma VIAGEM A TRABALHO
+              </option>
+              <option value="2 - Quero informações sobre PRODUTOS/FERRAMENTAS da INOVTOUR">
+                2 - Quero informações sobre PRODUTOS/FERRAMENTAS da INOVTOUR
+              </option>
+              <option value="3 - Preciso de suporte, orçamento ou informações para um EVENTO CORPORATIVO">
+                3 - Preciso de suporte, orçamento ou informações para um EVENTO CORPORATIVO
+              </option>
+              <option value="4 - Preciso de suporte, orçamento ou informações para uma VIAGEM DE INCENTIVO">
+                4 - Preciso de suporte, orçamento ou informações para uma VIAGEM DE INCENTIVO
+              </option>
               <option value="5 - Agendar uma reunião">5 - Agendar uma reunião</option>
             </select>
             {errors.subject && <p className="text-red-500">Assunto é obrigatório</p>}
           </div>
+
           <div className="">
             <input
               type="text"
@@ -116,6 +144,7 @@ const FormFields = () => {
             />
             {errors.organization && <p className="text-red-500">Empresa é obrigatório</p>}
           </div>
+
           <div className="">
             <input
               type="text"
@@ -147,6 +176,8 @@ const FormFields = () => {
               onChange={handleChange}
             />
           </div>
+
+          {/* Botões de preferência de contato */}
           <div className="">
             <p className="flex gap-5 py-3 text-gray-700">
               Preferência de contato <span className="text-grey2">(Opcional)</span>
@@ -198,6 +229,8 @@ const FormFields = () => {
               onChange={handleChange}
             ></textarea>
           </div>
+
+          {/* Checkbox de consentimento */}
           <div className="justi flex items-center">
             <input
               type="checkbox"
@@ -216,9 +249,7 @@ const FormFields = () => {
             <button
               type="submit"
               className={`rounded px-4 py-4 text-sm font-bold text-white focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-                formData.consent
-                  ? "bg-main hover:bg-main/80"
-                  : "bg-gray-400 cursor-not-allowed"
+                formData.consent ? "bg-main hover:bg-main/80" : "bg-gray-400 cursor-not-allowed"
               }`}
               disabled={!formData.consent}
             >
