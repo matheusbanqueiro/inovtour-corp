@@ -1,12 +1,10 @@
+// layout.tsx (sem "use client")
 import { Metadata } from 'next';
 import { getSettings } from "@/lib/sanity/client";
 import Footer from "@/components/footer";
 import { urlForImage } from "@/lib/sanity/image";
 import Navbar from "@/components/navbar";
-import GoogleTagManager from "@/components/googleTagManager";
-import FacebookPixel from "@/components/facebookPixel";
-import CookieConsent from "@/components/cookieConsent";  // Importando o componente CookieConsent
-
+import ConsentManager from "@/components/consentManager";  // Novo componente de cliente
 
 export async function generateMetadata(): Promise<Metadata> {
   const settings = await getSettings();
@@ -45,29 +43,23 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function Layout({ children }: { children: React.ReactNode }) {
   const settingsPromise = getSettings();
   const settings = await settingsPromise; 
-  const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
-  const pixelId = process.env.NEXT_PUBLIC_PIXEL_ID;
 
   return (
     <html lang="en">
       <head>
         <title>{settings?.title || "INOVTOUR"}</title>
         <meta name="description" content={settings?.description || "INOVTOUR cooperates with the best travel agencies in the world to provide you with the best travel experience."} />
-        {/* Remova os componentes do head para evitar erros de hidratação */}
       </head>
       <body>
         <div id="__next">
           <Navbar {...settings} />
           {children}
           <Footer {...settings} />
-          
-          {/* Renderize os scripts somente se o consentimento foi dado */}
-          {gtmId && <GoogleTagManager gtmId={gtmId} />}
-          {pixelId && <FacebookPixel pixelId={pixelId} />}
+
+          {/* Componente que gerencia o consentimento e rastreamento */}
+          <ConsentManager />
         </div>
       </body>
     </html>
   );
 }
-
-export const revalidate = 60;

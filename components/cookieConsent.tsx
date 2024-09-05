@@ -7,15 +7,16 @@ export default function CookieConsent({ onAccept }: { onAccept: () => void }) {
 
   useEffect(() => {
     const consent = localStorage.getItem("cookieConsent");
-    if (consent) {
+    if (consent === "true") {
       setIsVisible(false);
+      onAccept(); // Se o usuário já deu consentimento, ative os scripts
     }
-  }, []);
+  }, [onAccept]);
 
   const handleAccept = () => {
     localStorage.setItem("cookieConsent", "true");
     setIsVisible(false);
-    onAccept();
+    onAccept(); // Aciona o callback ao aceitar
   };
 
   if (!isVisible) return null;
