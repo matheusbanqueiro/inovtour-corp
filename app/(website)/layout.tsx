@@ -1,4 +1,3 @@
-// layout.tsx (sem "use client")
 import { Metadata } from 'next';
 import { getSettings } from "@/lib/sanity/client";
 import Footer from "@/components/footer";
