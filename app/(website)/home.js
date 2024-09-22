@@ -8,7 +8,7 @@ import Hero from "@/components/hero";
 import Solutions from "@/components/solutions";
 import TravelManagement from "@/components/travelManagement";
 import CommitmentSection from "@/components/commitmentSection";
-import InfoSegment from "@/components/infoSegment";
+import Info from "@/components/info";
 import InovtourNumbers from "@/components/inovtourNumbers";
 import Clients from "@/components/clients";
 import ContactForm from "@/components/contactForm";
@@ -35,7 +35,7 @@ export default function Home() {
       <Solutions />
       <TravelManagement />
       <CommitmentSection />
-      <InfoSegment
+      <Info
         imgSrc={segment.imgSrc}
         imgAlt={segment.imgAlt}
         isImgRight={segment.isImgRight}
