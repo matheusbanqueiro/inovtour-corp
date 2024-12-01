@@ -18,7 +18,7 @@ export default function Hero() {
       <div className="absolute inset-0 flex flex-col items-start justify-center gap-8 p-6 sm:p-8 md:p-10">
         <h1 className="font-regular w-auto text-2xl text-dark1 sm:text-4xl md:w-[556px] md:text-5xl">
           Tenha a melhor experiência de qualidade humanizada, digital e on-line em 
-          Viagens e Eventos Corporativas
+          Viagens e Eventos Corporativos
         </h1>
         <p className="text-sm text-dark2 sm:text-base md:w-1/2 md:text-lg">
           Consultoria e soluções em viagens e eventos corporativos

@@ -7,25 +7,38 @@ import World from "./icons/world.svg";
 
 const TravelManagement = () => {
   const topics = [
-    "Equipe Operacional com Consultores de Viagens Sêniores.",
-    "Implantação de SLA com Atendimento em Até 20 Minutos.",
-    "Logística Completa em Viagens Corporativas.",
-    "Atendimento Emergencial 7/24hs.",
-    "Controle e Gerenciamento de Processos.",
-    "Relatórios Customizados - Report BI.",
-    "Gerenciamento e Criação de Política de Viagens com Implantação de LGPD.",
-    "Consultoria e Análises de Resultados.",
-    "Passagens Aéreas.",
-    "Reserva de Hotéis.",
-    "Locação de Veículos.",
-    "Eventos Corporativos.",
-    "Seguro de Viagem.",
-    "Negociação com Fornecedores e Acordos Corporativos.",
-    "Sistema Operacional de Viagens On-Line.",
-    "Programa de Milhas Corporativas.",
-    "Controle de Despesas e Reembolsos - Expenses.",
-    "Viagens de Férias e de Lazer aos Funcionários e Colaboradores.",
-  ];
+    "Equipe Operacional com Consultores de Viagens Sêniores;",
+    
+    " - Atendimento Personalizado, Humanizado, Digital & On-line;",
+    " - Segurança e Praticidade de Soluções para Garantir os Melhores Resultados;",
+    " - Compromisso de Melhorar a Eficiência e Assegurar a Excelência da Qualidade;",
+
+
+    "Implantação de SLA com Atendimento em Até 20 Minutos;",
+    "Logística Completa em Viagens Corporativas;",
+    "Atendimento Emergencial 7/24hs;",
+    "Controle e Gerenciamento de Processos;",
+    "Relatórios Customizados - Report BI;",
+    "Gerenciamento e Criação de Política de Viagens com Implantação de LGPD;",
+    "Consultoria e Análises de Resultados;",
+    "Passagens Aéreas;",
+    "Reserva de Hotéis;",
+    "Locação de Veículos;",
+    "Eventos Corporativos;",
+    "Seguro de Viagem;",
+    "Negociação com Fornecedores e Acordos Corporativos;",
+    "Sistema Operacional de Viagens On-Line;",
+    "Programa de Milhas Corporativas;",
+    " - O Funcionário Soma Milhas;",
+    " - A Empresa Pontos Qualificáveis em Viagens.",
+    "Controle de Despesas e Reembolsos - Expenses:",
+    " - Por projetos",
+    "- Centro de custo",
+    "- Campanhas",
+    "- Departamentos",
+    "- Reembolsos",
+    "- Expenses",
+];
 
   // Dividir os tópicos em duas colunas
   const midPoint = Math.ceil(topics.length / 2);
@@ -37,7 +50,7 @@ const TravelManagement = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h3 className="text-xl font-medium text-gray-900 sm:text-2xl md:text-3xl">
-            CONSULTORIA E GERENCIAMENTO COMPLETO DE VIAGENS CORPORATIVAS - NACIONAIS E INTERNACIONAIS
+            CONSULTORIA E GERENCIAMENTO COMPLETO DE VIAGENS CORPORATIVAS NACIONAIS E INTERNACIONAIS
           </h3>
         </div>
 
@@ -50,6 +63,13 @@ const TravelManagement = () => {
             height={400}
             className="rounded-lg"
           />
+        </div>
+
+        <div className="text-center">
+          <h4 className="text-xl font-medium text-gray-900 sm:text-2xl md:text-3xl">
+          Desenvolvemos soluções para construção eficiente da gestão de viagens corporativas, 
+          sobre as quais são direcionadas em consolidar e garantir os melhores resultados:
+          </h4>
         </div>
 
         {/* Tópicos em duas colunas */}
