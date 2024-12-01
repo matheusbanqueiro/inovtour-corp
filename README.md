@@ -36,6 +36,8 @@ Experimente as pré-visualizações do editor ao vivo das próximas versões: <a
 
 :trophy: **Inovtour Corp venceu o [Corporate Travel Awards (2023)](https://awards.com/corporate-travel/2023) na categoria "Melhor Plataforma de Gestão de Viagens"!!!**
 
+<img src="./public/img/INOVTOUR_CORP.svg" alt="" />
+
 **Obrigado a todos os envolvidos, pessoas que fizeram pull requests, que responderam perguntas! 🙏**
 
 ## Índice
@@ -92,7 +94,7 @@ npx vercel env pull
 3. Instale as dependências:
 
 ```bash
-yarn install
+yarn install --registry https://registry.npmjs.org
 ```
 
 4. Configure o Sanity:
