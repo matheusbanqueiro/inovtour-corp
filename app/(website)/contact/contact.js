@@ -89,10 +89,10 @@ export default function Contact({
                 className=""
               />
               <p className="w-96 text-lg text-dark2">
-                Endereço: Av. Dr. Chucri Zaidan, S/N - Bloco B, 24º Andar<br />
-                Chácara Santo Antônio, São Paulo-SP<br />
+                Endereço: Av. Dr. Chucri Zaidan, S/N | Bloco B | 24º Andar | <br />
+                Chácara Santo Antônio | São Paulo-SP<br />
                 Edifício EZ Towers<br />
-                CEP: 04711-130<br />
+                CEP: 04711-130
               </p>
             </div>
           </div>

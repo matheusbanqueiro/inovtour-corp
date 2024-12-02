@@ -8,7 +8,9 @@ const FooterContact = ({ phone, email }) => {
   return (
     <div className="flex flex-col gap-3">
       <h3 className="text-base font-semibold text-white">Contato</h3>
-      <p className="text-xs text-grey3">Atendimento 24h</p>
+      <p className="text-xs text-grey3">
+      Atendimento Exclusivo e Personalizado 7/24hs
+      </p>
       <a
         href={whatsappURL}
         target="_blank"

@@ -8,7 +8,7 @@ import Check from "../components/icons/check.svg";
 import LinkedIn from "../components/icons/linkedIn.svg";
 import Facebook from "../components/icons/facebook.svg";
 import Instagram from "../components/icons/instagram.svg";
-import Logo from "../public/img/logo.png";
+import Logo from "../public/img/logo.jpeg";
 import FooterContact from "./footerContact"; // Importa o novo componente
 
 export default function Footer({
@@ -77,9 +77,9 @@ export default function Footer({
         </div>
         <div className="flex flex-col gap-3">
           <h3 className="text-base font-semibold text-white">Localização</h3>
-          <p className="w-[196px] text-left text-xs text-grey3 leading-tight">
-            Av. Dr. Chucri Zaidan, S/N - Bloco B, 24º Andar<br />
-            Chácara Santo Antônio, São Paulo-SP<br />
+          <p className="w-[300px] text-left text-xs text-grey3 leading-tight">
+            Av. Dr. Chucri Zaidan, S/N | Bloco B | 24º Andar | <br />
+            Chácara Santo Antônio | São Paulo-SP<br />
             Edifício EZ Towers<br />
             CEP: 04711-130
           </p>
