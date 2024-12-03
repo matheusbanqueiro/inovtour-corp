@@ -70,7 +70,7 @@ const TravelManagement = () => {
       ],
     },
     {
-      title: "Controle de Despesas e Reembolsos - Expenses;",
+      title: "Controle de Despesas e Reembolsos - Expenses:",
       subItems: [
         "Por projetos",
         "Centro de custo",
