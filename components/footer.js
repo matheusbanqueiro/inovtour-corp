@@ -8,7 +8,7 @@ import Check from "../components/icons/check.svg";
 import LinkedIn from "../components/icons/linkedIn.svg";
 import Facebook from "../components/icons/facebook.svg";
 import Instagram from "../components/icons/instagram.svg";
-import Logo from "../public/img/logo.jpeg";
+import Logo from "../public/img/logo.png";
 import FooterContact from "./footerContact"; // Importa o novo componente
 
 export default function Footer({

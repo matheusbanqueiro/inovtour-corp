@@ -10,11 +10,15 @@ const TravelManagement = () => {
   const structuredTopics = [
     {
       title: "Equipe Operacional com Consultores de Viagens Sêniores",
-      subItems: [
-        "Atendimento Personalizado, Humanizado, Digital & On-line",
-        "Segurança e Praticidade de Soluções para Garantir os Melhores Resultados",
-        "Compromisso de Melhorar a Eficiência e Assegurar a Excelência da Qualidade",
-      ],
+    },
+    {
+      title: "Atendimento Personalizado, Humanizado, Digital & On-line"
+    },
+    {
+      title: "Segurança e Praticidade de Soluções para Garantir os Melhores Resultados",
+    },
+    {
+      title: "Compromisso de Melhorar a Eficiência e Assegurar a Excelência da Qualidade",
     },
     {
       title: "Implantação de SLA com Atendimento em Até 20 Minutos",

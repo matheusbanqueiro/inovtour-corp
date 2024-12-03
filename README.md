@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://raw.githubusercontent.com/govinda777/inovtour-corp/main/public/img/logo.jpeg" height="150">
+<img src="https://raw.githubusercontent.com/govinda777/inovtour-corp/main/public/img/logo.png" height="150">
 </p>
 <h1 align="center">
 Inovtour Corp
