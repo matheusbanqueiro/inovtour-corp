@@ -16,7 +16,7 @@ Plataforma de gestão de viagens corporativas.
 </p>
 <p align="center">
 <a href="./README.pt-BR.md">Português (BR)</a>
-</p>
+</p> 
 <p align="center">
 Experimente as pré-visualizações do editor ao vivo das próximas versões: <a href="https://develop.inovtour-corp.live/" title="Experimente a versão da branch develop da inovtour-corp.">Develop</a> | <a href="https://next.inovtour-corp.live/" title="Experimente a versão da branch next da inovtour-corp.">Next</a>
 </p>
