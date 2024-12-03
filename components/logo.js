@@ -5,28 +5,40 @@ import { Disclosure } from "@headlessui/react";
 import Image from "next/image";
 import { urlForImage } from "@/lib/sanity/image";
 
-const Logo = ({ logo, logoalt, open }) => {
+const Logo = ({ 
+  logo, 
+  logoalt, 
+  open, 
+  width = 100, // default width em pixels
+  containerClass = "w-30" // default container width class
+}) => {
   return (
     <div className="flex w-full items-center justify-between md:w-auto">
-      <Link href="/" className="w-28 dark:hidden">
+      <Link href="/" className={`${containerClass} dark:hidden`}>
         {logo ? (
           <Image
             {...urlForImage(logo)}
             alt="Logo"
             priority={true}
-            sizes="(max-width: 640px) 100vw, 200px"
+            width={width}
+            height={width}
+            sizes={`(max-width: 640px) ${width}px, ${width}px`}
+            className="object-contain"
           />
         ) : (
           <span className="block text-center">INOVTOUR</span>
         )}
       </Link>
-      <Link href="/" className="hidden w-28 dark:block">
+      <Link href="/" className={`hidden ${containerClass} dark:block`}>
         {logoalt ? (
           <Image
             {...urlForImage(logoalt)}
             alt="Logo"
             priority={true}
-            sizes="(max-width: 640px) 100vw, 200px"
+            width={width}
+            height={width}
+            sizes={`(max-width: 640px) ${width}px, ${width}px`}
+            className="object-contain"
           />
         ) : (
           <span className="block text-center">INOVTOUR</span>

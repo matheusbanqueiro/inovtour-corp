@@ -9,68 +9,68 @@ const TravelManagement = () => {
   // Restructured topics with parent-child relationships
   const structuredTopics = [
     {
-      title: "Equipe Operacional com Consultores de Viagens Sêniores",
+      title: "Equipe Operacional com Consultores de Viagens Sêniores;",
     },
     {
-      title: "Atendimento Personalizado, Humanizado, Digital & On-line"
+      title: "Atendimento Personalizado, Humanizado, Digital & On-line;"
     },
     {
-      title: "Segurança e Praticidade de Soluções para Garantir os Melhores Resultados",
+      title: "Segurança e Praticidade de Soluções para Garantir os Melhores Resultados;",
     },
     {
-      title: "Compromisso de Melhorar a Eficiência e Assegurar a Excelência da Qualidade",
+      title: "Compromisso de Melhorar a Eficiência e Assegurar a Excelência da Qualidade;",
     },
     {
-      title: "Implantação de SLA com Atendimento em Até 20 Minutos",
+      title: "Implantação de SLA com Atendimento em Até 20 Minutos;",
     },
     {
-      title: "Logística Completa em Viagens Corporativas",
+      title: "Logística Completa em Viagens Corporativas;",
     },
     {
-      title: "Atendimento Emergencial 7/24hs",
+      title: "Atendimento Emergencial 7/24hs;",
     },
     {
-      title: "Controle e Gerenciamento de Processos",
+      title: "Controle e Gerenciamento de Processos;",
     },
     {
-      title: "Relatórios Customizados - Report BI",
+      title: "Relatórios Customizados - Report BI;",
     },
     {
-      title: "Gerenciamento e Criação de Política de Viagens com Implantação de LGPD",
+      title: "Gerenciamento e Criação de Política de Viagens com Implantação de LGPD;",
     },
     {
-      title: "Consultoria e Análises de Resultados",
+      title: "Consultoria e Análises de Resultados;",
     },
     {
-      title: "Passagens Aéreas",
+      title: "Passagens Aéreas;",
     },
     {
-      title: "Reserva de Hotéis",
+      title: "Reserva de Hotéis;",
     },
     {
-      title: "Locação de Veículos",
+      title: "Locação de Veículos;",
     },
     {
-      title: "Eventos Corporativos",
+      title: "Eventos Corporativos;",
     },
     {
-      title: "Seguro de Viagem",
+      title: "Seguro de Viagem;",
     },
     {
-      title: "Negociação com Fornecedores e Acordos Corporativos",
+      title: "Negociação com Fornecedores e Acordos Corporativos;",
     },
     {
-      title: "Sistema Operacional de Viagens On-Line",
+      title: "Sistema Operacional de Viagens On-Line;",
     },
     {
-      title: "Programa de Milhas Corporativas",
+      title: "Programa de Milhas Corporativas:",
       subItems: [
         "O Funcionário Soma Milhas",
         "A Empresa Pontos Qualificáveis em Viagens",
       ],
     },
     {
-      title: "Controle de Despesas e Reembolsos - Expenses",
+      title: "Controle de Despesas e Reembolsos - Expenses;",
       subItems: [
         "Por projetos",
         "Centro de custo",
