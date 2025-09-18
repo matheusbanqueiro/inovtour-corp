@@ -31,13 +31,14 @@ export default function Footer({
     console.log("Email:", emailInput);
   };
 
-  // Find URLs for each social media
+ const safeSocial = Array.isArray(social) ? social : [];
+
   const facebookURL =
-    social.find((socialItem) => socialItem.media === "facebook")?.url || "#";
+    safeSocial.find((item) => item.media === "facebook")?.url || "#";
   const linkedinURL =
-    social.find((socialItem) => socialItem.media === "linkedin")?.url || "#";
+    safeSocial.find((item) => item.media === "linkedin")?.url || "#";
   const instagramURL =
-    social.find((socialItem) => socialItem.media === "instagram")?.url || "#";
+    safeSocial.find((item) => item.media === "instagram")?.url || "#";
 
   return (
     <div className="bg-dark2">
