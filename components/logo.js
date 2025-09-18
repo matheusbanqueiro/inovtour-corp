@@ -5,7 +5,6 @@ import { Disclosure } from "@headlessui/react";
 import Image from "next/image";
 import { urlForImage } from "@/lib/sanity/image";
 
-// Foi descontinuado na navbar e substituído por next/image
 const Logo = ({ 
   logo, 
   logoalt, 
