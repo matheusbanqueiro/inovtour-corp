@@ -3,7 +3,11 @@
 import Script from "next/script";
 import React, { useEffect } from "react";
 
-export default function FacebookPixel({ pixelId }: { pixelId: string }) {
+export default function FacebookPixel({
+  pixelId
+}: {
+  pixelId: string;
+}) {
   useEffect(() => {
     if (!window.fbq) {
       const fbq: Window["fbq"] = function (...args: any[]) {
